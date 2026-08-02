@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "home": "Home",
+    "ai_modules": "AI Modules",
+    "benefits": "Benefits",
+    "contact": "Contact Us",
+    "login": "Log in",
+    "signup": "Sign up"
+  },
+  "hero": {
+    "subtitle": "PRECIA is an integrated clinical AI platform that accelerates medical decision-making with intelligent, data-driven insights."
+  },
+  "stats": {
+    "real_time": {
+      "value": "Real-time",
+      "label": "AI inference",
+      "description": "Our AI inference engine processes clinical data in milliseconds, enabling physicians to receive instant diagnostic suggestions and treatment recommendations powered by state-of-the-art neural networks."
+    },
+    "multi_model": {
+      "value": "Multi-model",
+      "label": "AI registry",
+      "description": "Access a curated registry of specialized medical AI models from radiology analysis to pathology classification, all validated against clinical benchmarks and seamlessly integrated into your workflow."
+    },
+    "multi_unit": {
+      "value": "Multi-unit",
+      "label": "governance",
+      "description": "Manage clinical governance across departments, facilities, and regions with unified dashboards that aggregate quality metrics while respecting each unit's unique compliance requirements."
+    },
+    "full_audit": {
+      "value": "Full",
+      "label": "audit trail",
+      "description": "Every decision, annotation, and model prediction is immutably logged with timestamps and user attribution, ensuring complete transparency for regulatory audits and continuous improvement."
+    }
+  },
+  "modules": {
+    "title": "Specialized AI for every",
+    "title_highlight": "department",
+    "subtitle": "Each module is meticulously trained on department-specific clinical data, delivering precision diagnostics and intelligent decision support tailored to your specialty.",
+    "explore_features": "Explore features",
+    "close": "Close",
+    "items": {
+      "CARD": {
+        "name": "Cardiology",
+        "description": "AI-powered cardiac analysis with real-time ECG interpretation, arrhythmia detection, and heart failure risk stratification. Our deep learning models analyze echocardiograms and cardiac MRI with cardiologist-level accuracy.",
+        "features": ["ECG Auto-Interpretation", "Arrhythmia Detection", "Heart Failure Prediction", "Cardiac Imaging AI"]
+      },
+      "DENT": {
+        "name": "Dentistry",
+        "description": "Intelligent dental imaging analysis with automated caries detection, periodontal assessment, and treatment planning. AI-assisted panoramic and CBCT scan interpretation for comprehensive oral diagnostics.",
+        "features": ["Caries Detection", "Periodontal Analysis", "CBCT Interpretation", "Treatment Planning"]
+      },
+      "EMER": {
+        "name": "Emergency",
+        "description": "Rapid triage AI that prioritizes critical patients using vital sign patterns, symptom clustering, and predictive deterioration scoring. Reduces door-to-treatment time with intelligent clinical pathways.",
+        "features": ["Smart Triage", "Deterioration Scoring", "Sepsis Early Warning", "Trauma Assessment"]
+      },
+      "SURG": {
+        "name": "General Surgery",
+        "description": "Pre-operative risk assessment and surgical planning AI. Analyzes patient history, imaging data, and comorbidities to predict outcomes and recommend optimal surgical approaches.",
+        "features": ["Risk Assessment", "Surgical Planning", "Outcome Prediction", "Post-op Monitoring"]
+      },
+      "ICU": {
+        "name": "Intensive Care Unit",
+        "description": "Continuous monitoring AI for critical care environments. Real-time analysis of multi-parameter vital signs, ventilator management, and early warning systems for clinical deterioration.",
+        "features": ["Multi-param Monitoring", "Ventilator Management", "Sepsis Prediction", "APACHE Scoring"]
+      },
+      "NEUR": {
+        "name": "Neurology",
+        "description": "Advanced neural imaging analysis and EEG interpretation. AI-powered stroke detection, seizure classification, and neurodegenerative disease progression tracking with millisecond precision.",
+        "features": ["Stroke Detection", "EEG Analysis", "Brain MRI Analysis", "Disease Progression"]
+      },
+      "ONCO": {
+        "name": "Oncology",
+        "description": "Precision oncology AI for tumor classification, treatment response prediction, and personalized therapy recommendations. Integrates genomic data with imaging for comprehensive cancer intelligence.",
+        "features": ["Tumor Classification", "Treatment Response", "Genomic Analysis", "Survival Prediction"]
+      },
+      "ORTH": {
+        "name": "Orthopedics",
+        "description": "AI-driven musculoskeletal imaging analysis with automated fracture detection, joint degeneration scoring, and surgical planning. Provides 3D reconstruction and implant size recommendation.",
+        "features": ["Fracture Detection", "Joint Analysis", "3D Reconstruction", "Implant Planning"]
+      },
+      "PEDI": {
+        "name": "Pediatrics",
+        "description": "Child-specific AI models calibrated for pediatric physiology. Growth trajectory analysis, developmental milestone tracking, and age-adjusted diagnostic support for neonatal to adolescent care.",
+        "features": ["Growth Analysis", "Development Tracking", "Neonatal Screening", "Dose Calculation"]
+      },
+      "RADI": {
+        "name": "Radiology",
+        "description": "State-of-the-art medical imaging AI covering X-ray, CT, MRI, and ultrasound modalities. Automated detection of abnormalities, structured reporting, and priority flagging for critical findings.",
+        "features": ["Multi-modality AI", "Auto Detection", "Structured Reporting", "Priority Flagging"]
+      },
+      "URO": {
+        "name": "Urology",
+        "description": "Intelligent urological diagnostics with AI-assisted imaging interpretation for kidney, bladder, and prostate conditions. Automated stone analysis, PSA pattern recognition, and renal function prediction.",
+        "features": ["Stone Analysis", "PSA Interpretation", "Renal Function AI", "Bladder Assessment"]
+      }
+    }
+  },
+  "benefits": {
+    "badge": "Platform Advantages",
+    "title_part1": "Why",
+    "title_highlight": "PRECIA?",
+    "subtitle": "A mature technical foundation that transforms medical AI innovation from prototype to real-world clinical solutions with measurable impact.",
+    "items": {
+      "01": {
+        "title": "Standardized Clinical Integration",
+        "description": "Eliminate technical barriers by unifying multiple medical AI models into a single ecosystem. PRECIA removes the need to build separate applications, enabling seamless integration directly into clinical workflows at hospitals that are IT-ready.",
+        "keywords": ["Unified Ecosystem", "Zero Fragmentation", "Plug & Play", "Clinical Workflow"],
+        "footer": "Interoperability"
+      },
+      "02": {
+        "title": "Data Security & Full Auditability",
+        "description": "Dealing with sensitive patient data requires bank-grade security. PRECIA features end-to-end encryption, strict Role-Based Access Control (RBAC), and detailed audit trails ensuring every analytical step is traceable and accountable.",
+        "keywords": ["End-to-End Encryption", "RBAC", "Audit Trail", "HIPAA Compliant"]
+      },
+      "03": {
+        "title": "Modular & Flexible Architecture",
+        "description": "Built with an API-first approach, PRECIA offers the freedom to toggle AI modules on or off based on institutional needs. Integrating new capabilities like EHR analytics becomes highly agile and non-disruptive.",
+        "keywords": ["API-First", "Microservices", "Scalable", "Agile"]
+      },
+      "04": {
+        "title": "Flexible Deployment Options",
+        "description": "Deploy on-premise for maximum data sovereignty or leverage hybrid-cloud infrastructure for unmatched scalability, balancing regulatory compliance with computational power.",
+        "keywords": ["On-Premise", "Hybrid Cloud", "Sovereignty", "Compliant"]
+      },
+      "05": {
+        "title": "Bridging Research Into Real-World Solutions",
+        "description": "Accelerate the transition from academic medical AI research into viable clinical products. PRECIA provides the necessary operational backbone, drastically reducing Go-To-Market time for healthcare innovators.",
+        "keywords": ["Research to Production", "Accelerated GTM", "Clinical Validation"],
+        "footer": "Innovation Pipeline",
+        "footer_value": "Accelerated"
+      }
+    }
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "title_part1": "Ready to transform your",
+    "title_highlight": "clinical workflow?",
+    "subtitle": "Join leading healthcare organizations that trust PRECIA for their quality, safety, and AI integration management. Connect with our team to discuss tailored solutions for your facility.",
+    "features": [
+      "Enterprise-grade security & compliance",
+      "Rapid deployment and integration",
+      "Dedicated clinical IT support 24/7"
+    ],
+    "form": {
+      "name_label": "Full Name",
+      "name_placeholder": "Dr. Jane Doe",
+      "institution_label": "Institution",
+      "institution_placeholder": "General Hospital",
+      "email_label": "Email Address",
+      "email_placeholder": "jane.doe@hospital.org",
+      "message_label": "How can we help?",
+      "message_placeholder": "Tell us about your clinical AI integration needs...",
+      "submit": "Send Message",
+      "disclaimer": "By submitting this form, you agree to our Privacy Policy and Terms of Service."
+    }
+  },
+  "footer": {
+    "copyright": "PRECIA Clinical Governance. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}

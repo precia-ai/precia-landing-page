@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "ai_modules": "Modul AI",
+    "benefits": "Keunggulan",
+    "contact": "Hubungi Kami",
+    "login": "Masuk",
+    "signup": "Daftar"
+  },
+  "hero": {
+    "subtitle": "PRECIA adalah platform AI klinis terintegrasi yang mempercepat pengambilan keputusan medis dengan wawasan cerdas berbasis data."
+  },
+  "stats": {
+    "real_time": {
+      "value": "Real-time",
+      "label": "Inferensi AI",
+      "description": "Mesin inferensi AI kami memproses data klinis dalam hitungan milidetik, memungkinkan dokter menerima saran diagnostik dan rekomendasi pengobatan instan yang didukung oleh jaringan saraf canggih."
+    },
+    "multi_model": {
+      "value": "Multi-model",
+      "label": "Registri AI",
+      "description": "Akses registri model AI medis khusus yang telah diseleksi, mulai dari analisis radiologi hingga klasifikasi patologi, semuanya divalidasi terhadap tolok ukur klinis dan terintegrasi mulus ke dalam alur kerja Anda."
+    },
+    "multi_unit": {
+      "value": "Multi-unit",
+      "label": "Tata Kelola",
+      "description": "Kelola tata kelola klinis di berbagai departemen, fasilitas, dan wilayah dengan dasbor terpadu yang menggabungkan metrik kualitas sambil tetap menghormati persyaratan kepatuhan unik setiap unit."
+    },
+    "full_audit": {
+      "value": "Penuh",
+      "label": "Jejak Audit",
+      "description": "Setiap keputusan, anotasi, dan prediksi model dicatat secara permanen dengan stempel waktu dan atribusi pengguna, memastikan transparansi lengkap untuk audit peraturan dan peningkatan berkelanjutan."
+    }
+  },
+  "modules": {
+    "title": "AI Khusus untuk setiap",
+    "title_highlight": "departemen",
+    "subtitle": "Setiap modul dilatih secara teliti pada data klinis spesifik departemen, memberikan diagnostik presisi dan dukungan keputusan cerdas yang disesuaikan dengan spesialisasi Anda.",
+    "explore_features": "Jelajahi fitur",
+    "close": "Tutup",
+    "items": {
+      "CARD": {
+        "name": "Kardiologi",
+        "description": "Analisis jantung berbasis AI dengan interpretasi EKG real-time, deteksi aritmia, dan stratifikasi risiko gagal jantung. Model pembelajaran mendalam kami menganalisis ekokardiogram dan MRI jantung dengan akurasi setingkat kardiolog.",
+        "features": ["Interpretasi EKG Otomatis", "Deteksi Aritmia", "Prediksi Gagal Jantung", "AI Pencitraan Jantung"]
+      },
+      "DENT": {
+        "name": "Kedokteran Gigi",
+        "description": "Analisis pencitraan gigi cerdas dengan deteksi karies otomatis, penilaian periodontal, dan perencanaan perawatan. Bantuan AI untuk interpretasi pemindaian panoramik dan CBCT untuk diagnostik mulut komprehensif.",
+        "features": ["Deteksi Karies", "Analisis Periodontal", "Interpretasi CBCT", "Perencanaan Perawatan"]
+      },
+      "EMER": {
+        "name": "Gawat Darurat",
+        "description": "AI triase cepat yang memprioritaskan pasien kritis menggunakan pola tanda vital, pengelompokan gejala, dan penilaian perburukan prediktif. Mengurangi waktu penanganan (door-to-treatment) dengan jalur klinis cerdas.",
+        "features": ["Triase Cerdas", "Skor Perburukan", "Peringatan Dini Sepsis", "Penilaian Trauma"]
+      },
+      "SURG": {
+        "name": "Bedah Umum",
+        "description": "AI penilaian risiko pra-operasi dan perencanaan bedah. Menganalisis riwayat pasien, data pencitraan, dan komorbiditas untuk memprediksi hasil dan merekomendasikan pendekatan bedah yang optimal.",
+        "features": ["Penilaian Risiko", "Perencanaan Bedah", "Prediksi Hasil", "Pemantauan Pasca-operasi"]
+      },
+      "ICU": {
+        "name": "Unit Perawatan Intensif",
+        "description": "AI pemantauan berkelanjutan untuk lingkungan perawatan kritis. Analisis real-time tanda vital multi-parameter, manajemen ventilator, dan sistem peringatan dini untuk pemburukan kondisi klinis.",
+        "features": ["Pemantauan Multi-param", "Manajemen Ventilator", "Prediksi Sepsis", "Skoring APACHE"]
+      },
+      "NEUR": {
+        "name": "Neurologi",
+        "description": "Analisis pencitraan saraf tingkat lanjut dan interpretasi EEG. Deteksi stroke bertenaga AI, klasifikasi kejang, dan pelacakan perkembangan penyakit neurodegeneratif dengan presisi milidetik.",
+        "features": ["Deteksi Stroke", "Analisis EEG", "Analisis MRI Otak", "Perkembangan Penyakit"]
+      },
+      "ONCO": {
+        "name": "Onkologi",
+        "description": "AI onkologi presisi untuk klasifikasi tumor, prediksi respons pengobatan, dan rekomendasi terapi yang dipersonalisasi. Mengintegrasikan data genom dengan pencitraan untuk kecerdasan kanker yang komprehensif.",
+        "features": ["Klasifikasi Tumor", "Respons Pengobatan", "Analisis Genom", "Prediksi Kelangsungan Hidup"]
+      },
+      "ORTH": {
+        "name": "Ortopedi",
+        "description": "Analisis pencitraan muskuloskeletal berbasis AI dengan deteksi patah tulang otomatis, penilaian degenerasi sendi, dan perencanaan bedah. Memberikan rekonstruksi 3D dan rekomendasi ukuran implan.",
+        "features": ["Deteksi Patah Tulang", "Analisis Sendi", "Rekonstruksi 3D", "Perencanaan Implan"]
+      },
+      "PEDI": {
+        "name": "Pediatri",
+        "description": "Model AI khusus anak yang dikalibrasi untuk fisiologi pediatrik. Analisis lintasan pertumbuhan, pelacakan tonggak perkembangan, dan dukungan diagnostik yang disesuaikan dengan usia untuk perawatan neonatal hingga remaja.",
+        "features": ["Analisis Pertumbuhan", "Pelacakan Perkembangan", "Skrining Neonatal", "Perhitungan Dosis"]
+      },
+      "RADI": {
+        "name": "Radiologi",
+        "description": "AI pencitraan medis canggih yang mencakup modalitas Sinar-X, CT, MRI, dan USG. Deteksi kelainan secara otomatis, pelaporan terstruktur, dan penandaan prioritas untuk temuan kritis.",
+        "features": ["AI Multi-modalitas", "Deteksi Otomatis", "Pelaporan Terstruktur", "Penandaan Prioritas"]
+      },
+      "URO": {
+        "name": "Urologi",
+        "description": "Diagnostik urologi cerdas dengan interpretasi pencitraan berbantuan AI untuk kondisi ginjal, kandung kemih, dan prostat. Analisis batu otomatis, pengenalan pola PSA, dan prediksi fungsi ginjal.",
+        "features": ["Analisis Batu", "Interpretasi PSA", "AI Fungsi Ginjal", "Penilaian Kandung Kemih"]
+      }
+    }
+  },
+  "benefits": {
+    "badge": "Keunggulan Platform",
+    "title_part1": "Mengapa",
+    "title_highlight": "PRECIA?",
+    "subtitle": "Fondasi teknis matang yang mengubah inovasi AI medis dari prototipe menjadi solusi klinis dunia nyata dengan dampak yang terukur.",
+    "items": {
+      "01": {
+        "title": "Integrasi Klinis yang Terstandarisasi",
+        "description": "Mengurangi hambatan teknis dengan menyatukan berbagai model AI medis ke dalam satu ekosistem tunggal. PRECIA meniadakan kebutuhan untuk membangun aplikasi terpisah, memungkinkan integrasi yang mulus langsung ke dalam alur kerja klinis di rumah sakit yang telah siap secara IT.",
+        "keywords": ["Ekosistem Terpadu", "Tanpa Fragmentasi", "Plug & Play", "Alur Kerja Klinis"],
+        "footer": "Interoperabilitas"
+      },
+      "02": {
+        "title": "Keamanan Data & Auditabilitas Terjamin",
+        "description": "Karena berurusan dengan data pasien yang sensitif, diperlukan keamanan tingkat bank. PRECIA dilengkapi dengan enkripsi end-to-end, Kontrol Akses Berbasis Peran (RBAC) yang ketat, dan jejak audit terperinci untuk memastikan setiap langkah analitik dapat ditelusuri dan dipertanggungjawabkan.",
+        "keywords": ["Enkripsi End-to-End", "RBAC", "Jejak Audit", "Sesuai HIPAA"]
+      },
+      "03": {
+        "title": "Arsitektur Modular & Fleksibel",
+        "description": "Dibangun dengan pendekatan API-first, PRECIA memberikan kebebasan untuk mengaktifkan atau menonaktifkan modul AI sesuai kebutuhan institusi. Mengintegrasikan kemampuan baru seperti analitik EHR menjadi sangat gesit dan tidak mengganggu alur sistem.",
+        "keywords": ["Berbasis API", "Layanan Mikro", "Skalabel", "Gesit"]
+      },
+      "04": {
+        "title": "Opsi Penerapan Fleksibel",
+        "description": "Terapkan secara on-premise untuk kedaulatan data maksimum atau manfaatkan infrastruktur cloud hibrida untuk skalabilitas tak tertandingi, menyeimbangkan kepatuhan terhadap regulasi dengan kekuatan komputasi.",
+        "keywords": ["On-Premise", "Cloud Hibrida", "Kedaulatan", "Sesuai Regulasi"]
+      },
+      "05": {
+        "title": "Menjembatani Riset Menjadi Solusi Nyata",
+        "description": "Mempercepat transisi dari riset AI medis akademis menjadi produk klinis yang layak. PRECIA menyediakan tulang punggung operasional yang diperlukan, secara drastis mengurangi waktu pemasaran (Go-To-Market) bagi para inovator layanan kesehatan.",
+        "keywords": ["Riset ke Produksi", "GTM Lebih Cepat", "Validasi Klinis"],
+        "footer": "Jalur Inovasi",
+        "footer_value": "Dipercepat"
+      }
+    }
+  },
+  "contact": {
+    "badge": "Hubungi Kami",
+    "title_part1": "Siap mentransformasi",
+    "title_highlight": "alur kerja klinis Anda?",
+    "subtitle": "Bergabunglah dengan organisasi layanan kesehatan terkemuka yang mempercayakan PRECIA untuk manajemen kualitas, keselamatan, dan integrasi AI mereka. Hubungi tim kami untuk mendiskusikan solusi yang disesuaikan dengan fasilitas Anda.",
+    "features": [
+      "Keamanan & kepatuhan tingkat perusahaan",
+      "Penerapan dan integrasi yang cepat",
+      "Dukungan TI klinis khusus 24/7"
+    ],
+    "form": {
+      "name_label": "Nama Lengkap",
+      "name_placeholder": "Dr. Jane Doe",
+      "institution_label": "Institusi",
+      "institution_placeholder": "Rumah Sakit Umum",
+      "email_label": "Alamat Email",
+      "email_placeholder": "jane.doe@hospital.org",
+      "message_label": "Ada yang bisa kami bantu?",
+      "message_placeholder": "Beri tahu kami tentang kebutuhan integrasi AI klinis Anda...",
+      "submit": "Kirim Pesan",
+      "disclaimer": "Dengan mengirimkan formulir ini, Anda menyetujui Kebijakan Privasi dan Ketentuan Layanan kami."
+    }
+  },
+  "footer": {
+    "copyright": "Tata Kelola Klinis PRECIA. Hak cipta dilindungi undang-undang.",
+    "privacy": "Privasi",
+    "terms": "Ketentuan"
+  }
+}
