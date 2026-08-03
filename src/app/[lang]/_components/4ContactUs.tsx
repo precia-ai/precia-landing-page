@@ -1,9 +1,26 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ShieldCheckIcon, BoltIcon, ChatBubbleBottomCenterTextIcon, UserIcon, BuildingOfficeIcon, EnvelopeIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import { useActionState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ShieldCheckIcon, BoltIcon, ChatBubbleBottomCenterTextIcon, UserIcon, BuildingOfficeIcon, EnvelopeIcon, PaperAirplaneIcon, CheckCircleIcon, ExclamationTriangleIcon } from "@heroicons/react/24/outline";
+import { submitContactForm, type ContactFormState } from "@/app/actions/contactActions";
+
+const initialState: ContactFormState = {
+  success: false,
+  message: "",
+};
 
 export default function ContactUs({ dict }: { dict: any }) {
+  const [state, formAction, isPending] = useActionState(submitContactForm, initialState);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Reset form on successful submission
+  useEffect(() => {
+    if (state.success && formRef.current) {
+      formRef.current.reset();
+    }
+  }, [state.success]);
+
   return (
     <section id="contact" className="py-32 relative overflow-hidden" style={{ background: "linear-gradient(180deg, #f5f8fc 0%, #eef3f9 100%)" }}>
       {/* Background Effects */}
@@ -70,89 +87,144 @@ export default function ContactUs({ dict }: { dict: any }) {
               {/* Top gradient accent */}
               <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#0052ff]/30 to-transparent" />
 
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              {/* Status Messages */}
+              <AnimatePresence mode="wait">
+                {state.message && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                    className={`mb-6 p-4 rounded-xl flex items-start gap-3 ${
+                      state.success
+                        ? "bg-emerald-50 border border-emerald-200 text-emerald-800"
+                        : "bg-red-50 border border-red-200 text-red-800"
+                    }`}
+                  >
+                    {state.success ? (
+                      <CheckCircleIcon className="w-5 h-5 mt-0.5 flex-shrink-0 text-emerald-600" />
+                    ) : (
+                      <ExclamationTriangleIcon className="w-5 h-5 mt-0.5 flex-shrink-0 text-red-600" />
+                    )}
+                    <span className="text-sm font-medium">{state.message}</span>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <form ref={formRef} className="space-y-5" action={formAction}>
                 {/* Name & Institution Row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div className="space-y-1.5">
-                    <label htmlFor="name" className="text-xs font-semibold text-[#0a1b4e]/70 pl-1">{dict.contact.form.name_label}</label>
+                    <label htmlFor="contact-name" className="text-xs font-semibold text-[#0a1b4e]/70 pl-1">{dict.contact.form.name_label}</label>
                     <div className="relative group">
                       <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                         <UserIcon className="h-5 w-5 text-gray-400 group-focus-within:text-[#0052ff] transition-colors" />
                       </div>
                       <input
                         type="text"
-                        id="name"
+                        id="contact-name"
                         name="name"
                         className="block w-full pl-11 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl text-[#0a1b4e] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0052ff]/30 focus:border-[#0052ff]/50 transition-all font-medium"
                         placeholder={dict.contact.form.name_placeholder}
                         required
+                        disabled={isPending}
                       />
                     </div>
+                    {state.errors?.name && (
+                      <p className="text-xs text-red-500 pl-1">{state.errors.name[0]}</p>
+                    )}
                   </div>
 
                   <div className="space-y-1.5">
-                    <label htmlFor="institution" className="text-xs font-semibold text-[#0a1b4e]/70 pl-1">{dict.contact.form.institution_label}</label>
+                    <label htmlFor="contact-institution" className="text-xs font-semibold text-[#0a1b4e]/70 pl-1">{dict.contact.form.institution_label}</label>
                     <div className="relative group">
                       <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                         <BuildingOfficeIcon className="h-5 w-5 text-gray-400 group-focus-within:text-[#0052ff] transition-colors" />
                       </div>
                       <input
                         type="text"
-                        id="institution"
+                        id="contact-institution"
                         name="institution"
                         className="block w-full pl-11 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl text-[#0a1b4e] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0052ff]/30 focus:border-[#0052ff]/50 transition-all font-medium"
                         placeholder={dict.contact.form.institution_placeholder}
                         required
+                        disabled={isPending}
                       />
                     </div>
+                    {state.errors?.institution && (
+                      <p className="text-xs text-red-500 pl-1">{state.errors.institution[0]}</p>
+                    )}
                   </div>
                 </div>
 
                 {/* Email */}
                 <div className="space-y-1.5">
-                  <label htmlFor="email" className="text-xs font-semibold text-[#0a1b4e]/70 pl-1">{dict.contact.form.email_label}</label>
+                  <label htmlFor="contact-email" className="text-xs font-semibold text-[#0a1b4e]/70 pl-1">{dict.contact.form.email_label}</label>
                   <div className="relative group">
                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                       <EnvelopeIcon className="h-5 w-5 text-gray-400 group-focus-within:text-[#0052ff] transition-colors" />
                     </div>
                     <input
                       type="email"
-                      id="email"
+                      id="contact-email"
                       name="email"
                       className="block w-full pl-11 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl text-[#0a1b4e] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0052ff]/30 focus:border-[#0052ff]/50 transition-all font-medium"
                       placeholder={dict.contact.form.email_placeholder}
                       required
+                      disabled={isPending}
                     />
                   </div>
+                  {state.errors?.email && (
+                    <p className="text-xs text-red-500 pl-1">{state.errors.email[0]}</p>
+                  )}
                 </div>
 
                 {/* Message */}
                 <div className="space-y-1.5">
-                  <label htmlFor="message" className="text-xs font-semibold text-[#0a1b4e]/70 pl-1">{dict.contact.form.message_label}</label>
+                  <label htmlFor="contact-message" className="text-xs font-semibold text-[#0a1b4e]/70 pl-1">{dict.contact.form.message_label}</label>
                   <div className="relative group">
                     <div className="absolute top-4 left-4 pointer-events-none">
                       <ChatBubbleBottomCenterTextIcon className="h-5 w-5 text-gray-400 group-focus-within:text-[#0052ff] transition-colors" />
                     </div>
                     <textarea
-                      id="message"
+                      id="contact-message"
                       name="message"
                       rows={4}
                       className="block w-full pl-11 pr-4 py-3.5 bg-white border border-gray-200 rounded-xl text-[#0a1b4e] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0052ff]/30 focus:border-[#0052ff]/50 transition-all font-medium resize-none"
                       placeholder={dict.contact.form.message_placeholder}
                       required
+                      disabled={isPending}
                     />
                   </div>
+                  {state.errors?.message && (
+                    <p className="text-xs text-red-500 pl-1">{state.errors.message[0]}</p>
+                  )}
                 </div>
 
                 {/* Submit Button */}
                 <motion.button
-                  whileHover={{ scale: 1.02, boxShadow: "0 10px 25px -5px rgba(0, 82, 255, 0.4)" }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={!isPending ? { scale: 1.02, boxShadow: "0 10px 25px -5px rgba(0, 82, 255, 0.4)" } : {}}
+                  whileTap={!isPending ? { scale: 0.98 } : {}}
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#0052ff] to-[#15acd6] px-8 py-4 rounded-xl flex items-center justify-center gap-2 mt-4 text-white font-semibold transition-all shadow-md group"
+                  disabled={isPending}
+                  className={`w-full bg-gradient-to-r from-[#0052ff] to-[#15acd6] px-8 py-4 rounded-xl flex items-center justify-center gap-2 mt-4 text-white font-semibold transition-all shadow-md group ${
+                    isPending ? "opacity-70 cursor-not-allowed" : ""
+                  }`}
                 >
-                  <span>{dict.contact.form.submit}</span>
-                  <PaperAirplaneIcon className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                  {isPending ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                      </svg>
+                      <span>Sending...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>{dict.contact.form.submit}</span>
+                      <PaperAirplaneIcon className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                    </>
+                  )}
                 </motion.button>
 
 

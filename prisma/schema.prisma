@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// Stores submissions from the landing page Contact Us form.
+/// This table is independent — no foreign keys to precia-be tables.
+model ContactSubmission {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name        String   @db.Text
+  email       String   @db.Text
+  institution String   @db.Text
+  message     String   @db.Text
+  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz
+  isRead      Boolean  @default(false) @map("is_read")
+
+  @@map("contact_submission")
+}
