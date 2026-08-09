@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { siteUrl } from "@/lib/site";
 import "../globals.css";
 
 const inter = Inter({
@@ -15,8 +16,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PRECIA",
-  description: "PRECIA clinical governance platform",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "PRECIA",
+    template: "%s",
+  },
 };
 
 export async function generateStaticParams() {
