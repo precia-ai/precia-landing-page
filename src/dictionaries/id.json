@@ -1,242 +1,176 @@
 {
   "nav": {
-    "home": "Beranda",
-    "ai_modules": "Modul AI",
-    "benefits": "Keunggulan",
-    "contact": "Hubungi Kami",
+    "platform": "Platform",
+    "modules": "Modul AI",
+    "how_it_works": "Cara kerja",
+    "security": "Keamanan",
+    "contact": "Kontak",
     "login": "Masuk",
-    "signup": "Daftar"
+    "cta": "Jadwalkan demo"
   },
   "hero": {
-    "subtitle": "PRECIA adalah platform AI klinis terintegrasi yang mempercepat pengambilan keputusan medis lewat analisis data yang cerdas dan akurat."
+    "badge": "Platform AI klinis",
+    "title": "Skrining lebih cepat, keputusan tetap di tangan dokter",
+    "subtitle": "PRECIA menjalankan modul AI klinis, dari ECG sampai uroflowmetry, dalam satu sistem. Rumah sakit tidak perlu memasang aplikasi baru setiap ada modul baru.",
+    "cta_primary": "Jadwalkan demo",
+    "cta_secondary": "Lihat modul AI",
+    "stat1_value": "30 detik",
+    "stat1_label": "Hasil skrining AI, permintaan standar",
+    "stat2_value": "99,9%",
+    "stat2_label": "Uptime pada jam operasional",
+    "stat3_value": "100%",
+    "stat3_label": "Mutasi data tercatat di audit trail",
+    "dashboard_caption": "Dashboard klinis PRECIA"
   },
-  "stats": {
-    "real_time": {
-      "value": "Real-time",
-      "label": "Inferensi AI",
-      "description": "Mesin inferensi AI kami memproses data klinis hanya dalam hitungan milidetik, sehingga dokter dapat langsung menerima saran diagnostik dan rekomendasi pengobatan yang didukung teknologi jaringan saraf tiruan tercanggih."
-    },
-    "multi_model": {
-      "value": "Multi-model",
-      "label": "Registri AI",
-      "description": "Akses registri model AI medis pilihan — mulai dari analisis radiologi hingga klasifikasi patologi — yang telah divalidasi sesuai tolok ukur klinis dan terintegrasi mulus ke dalam alur kerja Anda."
-    },
-    "multi_unit": {
-      "value": "Multi-unit",
-      "label": "Tata Kelola",
-      "description": "Awasi tata kelola klinis di berbagai departemen, fasilitas, dan wilayah lewat dasbor terpadu yang merangkum metrik kualitas, sambil tetap memenuhi persyaratan kepatuhan khas masing-masing unit."
-    },
-    "full_audit": {
-      "value": "Lengkap",
-      "label": "Jejak Audit",
-      "description": "Setiap keputusan, anotasi, dan prediksi model dicatat secara permanen lengkap dengan stempel waktu dan identitas pengguna, sehingga transparansi tetap terjaga penuh untuk keperluan audit regulasi maupun penyempurnaan berkelanjutan."
-    }
+  "partners": {
+    "label": "Dikembangkan bersama"
+  },
+  "problems": {
+    "eyebrow": "Masalah yang kami selesaikan",
+    "title": "Empat beban harian rumah sakit dan dokter",
+    "solution_prefix": "Dengan PRECIA:",
+    "items": [
+      {
+        "tag": "Masalah",
+        "title": "Antrean pemeriksaan panjang",
+        "description": "Puluhan bacaan per hari, kualitas naik turun saat dokter kelelahan.",
+        "solution": "Skrining awal keluar dalam 30 detik, konsisten tiap pemeriksaan."
+      },
+      {
+        "tag": "Masalah",
+        "title": "Tiap alat AI punya aplikasi sendiri",
+        "description": "Staf berpindah aplikasi dan login berulang, modul baru berarti pengadaan baru.",
+        "solution": "Semua modul dalam satu platform, satu akun, satu alur kerja."
+      },
+      {
+        "tag": "Masalah",
+        "title": "Audit dan kepatuhan makan waktu",
+        "description": "Menelusuri siapa memeriksa apa dan kapan masih serba manual.",
+        "solution": "Setiap mutasi data tercatat otomatis dan siap ditelusuri."
+      },
+      {
+        "tag": "Masalah",
+        "title": "Takut AI mengganggu alur yang sudah jalan",
+        "description": "Integrasi sering panjang, mahal, dan mengubah kebiasaan poli.",
+        "solution": "Melengkapi sistem yang berjalan, dokter tetap pemegang keputusan."
+      }
+    ]
+  },
+  "how": {
+    "eyebrow": "Cara kerja",
+    "title": "Empat langkah, tanpa mengubah kebiasaan poli",
+    "steps": [
+      { "title": "Data masuk", "description": "Rekaman ECG atau hasil uroflowmetry diunggah ke transaksi klinis pasien." },
+      { "title": "AI menyaring", "description": "Modul AI yang relevan berjalan dan mengembalikan hasil dalam 30 detik." },
+      { "title": "Dokter meninjau", "description": "Confidence score dan penjelasan hasil ditampilkan. Dokter yang memutuskan." },
+      { "title": "Semua tercatat", "description": "Aktivitas AI dan pengguna masuk ke audit trail untuk kepatuhan." }
+    ]
   },
   "modules": {
-    "title": "AI Khusus untuk Setiap",
-    "title_highlight": "Departemen",
-    "subtitle": "Setiap modul dilatih secara cermat menggunakan data klinis khas tiap departemen, menghasilkan diagnostik presisi dan dukungan keputusan cerdas yang disesuaikan dengan spesialisasi Anda.",
-    "explore_features": "Jelajahi fitur",
-    "close": "Tutup",
-    "items": {
-      "CARD": {
-        "name": "Kardiologi",
-        "description": "Analisis jantung berbasis AI untuk interpretasi EKG secara real-time, deteksi aritmia, dan stratifikasi risiko gagal jantung. Model deep learning kami menganalisis ekokardiogram dan MRI jantung dengan akurasi setara kardiolog spesialis.",
-        "features": [
-          "Interpretasi EKG Otomatis",
-          "Deteksi Aritmia",
-          "Prediksi Gagal Jantung",
-          "Pencitraan Jantung AI"
-        ]
+    "eyebrow": "Modul AI",
+    "title": "Satu platform, banyak spesialisasi",
+    "subtitle": "Modul baru masuk ke platform yang sama, tanpa instalasi aplikasi terpisah dan tanpa akun tambahan.",
+    "status_available": "Tersedia",
+    "status_research": "Dalam pengembangan",
+    "status_roadmap": "Segera",
+    "roadmap_prefix": "Dalam pengembangan:",
+    "items": [
+      {
+        "category": "Kardiologi",
+        "name": "AI-ECG (EF Screening)",
+        "status": "available",
+        "description": "Bantu dokter menyaring indikasi fungsi pompa jantung menurun, dari rekaman ECG biasa.",
+        "roadmap": "EF dan katup mitral dari citra ECG, serta quality control citra ECG."
       },
-      "DENT": {
-        "name": "Kedokteran Gigi",
-        "description": "Analisis pencitraan gigi cerdas dengan deteksi karies otomatis, penilaian periodontal, dan perencanaan perawatan. AI membantu interpretasi hasil pindai panoramik dan CBCT, sehingga diagnostik mulut menjadi lebih menyeluruh.",
-        "features": [
-          "Deteksi Karies",
-          "Analisis Periodontal",
-          "Interpretasi CBCT",
-          "Perencanaan Perawatan"
-        ]
+      {
+        "category": "Urologi",
+        "name": "AI-BOO Multimodal",
+        "status": "available",
+        "description": "Skrining Bladder Outlet Obstruction dari waveform uroflowmetry dan data klinis pasien.",
+        "roadmap": "Varian AI-BOO lain dan skrining Detrusor Underactivity."
       },
-      "EMER": {
-        "name": "Gawat Darurat",
-        "description": "AI untuk triase cepat yang memprioritaskan pasien kritis berdasarkan pola tanda vital, pengelompokan gejala, dan penilaian prediktif risiko perburukan. Sistem ini mempersingkat waktu tunggu hingga penanganan lewat alur klinis yang cerdas.",
-        "features": [
-          "Triase Cerdas",
-          "Skor Perburukan",
-          "Peringatan Dini Sepsis",
-          "Penilaian Trauma"
-        ]
+      {
+        "category": "Ortodonti",
+        "name": "AI-Ortho",
+        "status": "research",
+        "description": "Analisis foto wajah depan dan samping untuk menilai simetri serta proporsi.",
+        "roadmap": "Arah pengembangan sudah jelas, kami buka diskusi untuk uji coba bersama."
       },
-      "SURG": {
-        "name": "Bedah Umum",
-        "description": "AI untuk penilaian risiko pra-operasi dan perencanaan bedah. Sistem ini menganalisis riwayat pasien, data pencitraan, dan komorbiditas untuk memprediksi hasil serta merekomendasikan pendekatan bedah yang optimal.",
-        "features": [
-          "Penilaian Risiko",
-          "Perencanaan Bedah",
-          "Prediksi Hasil",
-          "Pemantauan Pasca-operasi"
-        ]
-      },
-      "ICU": {
-        "name": "Unit Perawatan Intensif",
-        "description": "AI untuk pemantauan berkelanjutan di ruang perawatan kritis. Sistem ini menganalisis tanda vital multi-parameter secara real-time, mengelola ventilator, dan memberikan peringatan dini atas perburukan kondisi klinis.",
-        "features": [
-          "Pemantauan Multi-param",
-          "Manajemen Ventilator",
-          "Prediksi Sepsis",
-          "Skoring APACHE"
-        ]
-      },
-      "NEUR": {
-        "name": "Neurologi",
-        "description": "Analisis pencitraan saraf tingkat lanjut dan interpretasi EEG. Ditenagai AI, sistem ini mendeteksi stroke, mengklasifikasikan jenis kejang, dan melacak perkembangan penyakit neurodegeneratif dengan presisi hingga hitungan milidetik.",
-        "features": [
-          "Deteksi Stroke",
-          "Analisis EEG",
-          "Analisis MRI Otak",
-          "Perkembangan Penyakit"
-        ]
-      },
-      "ONCO": {
-        "name": "Onkologi",
-        "description": "AI untuk onkologi presisi yang mengklasifikasikan tumor, memprediksi respons pengobatan, dan memberikan rekomendasi terapi yang dipersonalisasi. Sistem ini memadukan data genom dengan hasil pencitraan untuk pemahaman kanker yang lebih menyeluruh.",
-        "features": [
-          "Klasifikasi Tumor",
-          "Respons Pengobatan",
-          "Analisis Genom",
-          "Prediksi Kelangsungan Hidup"
-        ]
-      },
-      "ORTH": {
-        "name": "Ortopedi",
-        "description": "Analisis pencitraan muskuloskeletal berbasis AI dengan deteksi patah tulang otomatis, penilaian degenerasi sendi, dan perencanaan bedah, lengkap dengan rekonstruksi 3D dan rekomendasi ukuran implan.",
-        "features": [
-          "Deteksi Patah Tulang",
-          "Analisis Sendi",
-          "Rekonstruksi 3D",
-          "Perencanaan Implan"
-        ]
-      },
-      "PEDI": {
-        "name": "Pediatri",
-        "description": "Model AI khusus anak yang dikalibrasi sesuai fisiologi pediatrik. Sistem ini menganalisis lintasan pertumbuhan, melacak tonggak perkembangan, dan memberikan dukungan diagnostik yang disesuaikan dengan usia, mulai dari perawatan neonatal hingga remaja.",
-        "features": [
-          "Analisis Pertumbuhan",
-          "Pelacakan Perkembangan",
-          "Skrining Neonatal",
-          "Perhitungan Dosis"
-        ]
-      },
-      "RADI": {
-        "name": "Radiologi",
-        "description": "AI pencitraan medis canggih yang mencakup modalitas sinar-X, CT, MRI, dan USG. Sistem ini mendeteksi kelainan secara otomatis, menghasilkan laporan terstruktur, dan menandai temuan kritis sebagai prioritas.",
-        "features": [
-          "AI Multi-modalitas",
-          "Deteksi Otomatis",
-          "Pelaporan Terstruktur",
-          "Penandaan Prioritas"
-        ]
-      },
-      "URO": {
-        "name": "Urologi",
-        "description": "Diagnostik urologi cerdas dengan interpretasi pencitraan berbantuan AI untuk kondisi ginjal, kandung kemih, dan prostat. Sistem ini menganalisis batu saluran kemih secara otomatis, mengenali pola PSA, dan memprediksi fungsi ginjal.",
-        "features": [
-          "Analisis Batu",
-          "Interpretasi PSA",
-          "AI Fungsi Ginjal",
-          "Penilaian Kandung Kemih"
-        ]
+      {
+        "category": "Spesialisasi berikutnya",
+        "name": "Modul baru",
+        "status": "roadmap",
+        "description": "Kami menambah modul AI baru sesuai kebutuhan rumah sakit dan klinik mitra.",
+        "roadmap": "Punya kebutuhan skrining spesifik? Diskusikan dengan tim kami."
       }
-    }
+    ]
   },
-  "benefits": {
-    "badge": "Keunggulan Platform",
-    "title_part1": "Mengapa",
-    "title_highlight": "PRECIA?",
-    "subtitle": "Fondasi teknis matang yang mengubah inovasi AI medis dari prototipe menjadi solusi klinis dunia nyata dengan dampak yang terukur.",
-    "items": {
-      "01": {
-        "title": "Integrasi Klinis yang Terstandarisasi",
-        "description": "Mengurangi hambatan teknis dengan menyatukan berbagai model AI medis ke dalam satu ekosistem tunggal. PRECIA menghilangkan kebutuhan membangun aplikasi terpisah, sehingga integrasi bisa langsung masuk ke alur kerja klinis di rumah sakit yang infrastruktur TI-nya sudah memadai.",
-        "keywords": [
-          "Ekosistem Terpadu",
-          "Tanpa Fragmentasi",
-          "Plug & Play",
-          "Alur Kerja Klinis"
-        ],
-        "footer": "Interoperabilitas"
-      },
-      "02": {
-        "title": "Keamanan Data & Auditabilitas Terjamin",
-        "description": "Karena berurusan dengan data pasien yang sensitif, diperlukan keamanan setingkat institusi perbankan. PRECIA dilengkapi enkripsi end-to-end, Kontrol Akses Berbasis Peran (RBAC) yang ketat, dan jejak audit terperinci, sehingga setiap langkah analitik dapat ditelusuri dan dipertanggungjawabkan.",
-        "keywords": [
-          "Enkripsi End-to-End",
-          "RBAC",
-          "Jejak Audit",
-          "Sesuai HIPAA"
-        ]
-      },
-      "03": {
-        "title": "Arsitektur Modular & Fleksibel",
-        "description": "Dibangun dengan pendekatan API-first, PRECIA memberikan kebebasan untuk mengaktifkan atau menonaktifkan modul AI sesuai kebutuhan institusi. Kemampuan baru seperti analitik EHR pun dapat diintegrasikan dengan gesit, tanpa mengganggu alur kerja sistem yang sudah berjalan.",
-        "keywords": [
-          "Berbasis API",
-          "Layanan Mikro",
-          "Skalabel",
-          "Gesit"
-        ]
-      },
-      "04": {
-        "title": "Opsi Penerapan Fleksibel",
-        "description": "Terapkan sistem secara on-premise demi kedaulatan data penuh, atau manfaatkan infrastruktur cloud hibrida untuk skalabilitas tanpa batas — menyeimbangkan kepatuhan regulasi dengan kekuatan komputasi yang dibutuhkan.",
-        "keywords": [
-          "On-Premise",
-          "Cloud Hibrida",
-          "Kedaulatan",
-          "Sesuai Regulasi"
-        ]
-      },
-      "05": {
-        "title": "Menjembatani Riset Menjadi Solusi Nyata",
-        "description": "Mempercepat transisi riset AI medis dari dunia akademik menjadi produk klinis yang siap pakai. PRECIA menyediakan fondasi operasional yang dibutuhkan, sehingga waktu yang diperlukan inovator layanan kesehatan untuk membawa produknya ke pasar bisa dipangkas drastis.",
-        "keywords": [
-          "Riset ke Produksi",
-          "Peluncuran Lebih Cepat",
-          "Validasi Klinis"
-        ],
-        "footer": "Jalur Inovasi",
-        "footer_value": "Dipercepat"
-      }
-    }
+  "showcase": {
+    "eyebrow": "Tampilan produk",
+    "title": "Hasil AI yang bisa dibaca dan ditelusuri dokter",
+    "ecg_alt": "Hasil AI-ECG EF Screening di PRECIA",
+    "ecg_caption": "AI-ECG: confidence score, klasifikasi, dan panduan membaca hasil. Konfirmasi klinis tetap diperlukan.",
+    "uroflow_alt": "Hasil AI-BOO Multimodal dengan waveform uroflowmetry di PRECIA",
+    "uroflow_caption": "AI-BOO Multimodal: bagian waveform uroflowmetry yang paling memengaruhi prediksi ikut ditampilkan."
+  },
+  "platform": {
+    "eyebrow": "Platform dan kepatuhan",
+    "title": "Aman dipakai banyak unit, siap diaudit",
+    "features": [
+      { "title": "Multi-tenant dan RBAC", "description": "Tiap rumah sakit dan tiap peran hanya melihat data yang jadi haknya." },
+      { "title": "Audit trail otomatis", "description": "Aktivitas AI dan pengguna tercatat tanpa pekerjaan tambahan." },
+      { "title": "Safety check hasil AI", "description": "Hasil dengan keyakinan rendah otomatis ditandai untuk ditinjau dokter." },
+      { "title": "Arsitektur modular", "description": "Modul AI baru masuk tanpa memasang sistem terpisah." }
+    ],
+    "stats": [
+      { "value": "99,9%", "label": "Uptime platform selama jam operasional" },
+      { "value": "30 dtk", "label": "Hasil AI keluar untuk permintaan standar" },
+      { "value": "40%", "label": "Lebih hemat dibanding membangun aplikasi AI berdiri sendiri" },
+      { "value": "50%", "label": "Waktu administratif klinisi yang dihemat, tanpa pindah aplikasi" }
+    ]
   },
   "contact": {
-    "badge": "Hubungi Kami",
-    "title_part1": "Siap Mengubah",
-    "title_highlight": "Alur Kerja Klinis Anda?",
-    "subtitle": "Bergabunglah bersama organisasi layanan kesehatan terkemuka yang mempercayakan PRECIA untuk mengelola kualitas, keselamatan, dan integrasi AI mereka. Hubungi tim kami untuk mendiskusikan solusi yang disesuaikan dengan kebutuhan fasilitas Anda.",
-    "features": [
-      "Keamanan & kepatuhan kelas enterprise",
-      "Penerapan dan integrasi yang cepat",
-      "Dukungan TI klinis khusus 24/7"
+    "eyebrow": "Hubungi kami",
+    "title": "Diskusikan kebutuhan skrining di unit Anda",
+    "subtitle": "Ceritakan modul dan volume pemeriksaan yang Anda tangani. Kami siapkan demo sesuai alur kerja poli Anda.",
+    "website_label": "Website",
+    "website_value": "precia.site",
+    "demo_label": "Coba demo",
+    "demo_value": "app-dev.precia.site",
+    "demo_note": "Akses demo diberikan setelah kami hubungi Anda.",
+    "email_label": "Email",
+    "email_value": "hello@precia.site",
+    "contacts": [
+      { "name": "Muhammad Febrian Rachmadi", "role": "Lead of Product", "email": "febrianrachmadi@cs.ui.ac.id", "phone": "+62 858 1055 6865" },
+      { "name": "Syahrul Apriansyah", "role": "Product Manager", "email": "apriansyah.syahrul@gmail.com", "phone": "+62 857 7806 0482" }
     ],
     "form": {
-      "name_label": "Nama Lengkap",
-      "name_placeholder": "Dr. Jane Doe",
-      "institution_label": "Institusi",
-      "institution_placeholder": "Rumah Sakit Umum",
-      "email_label": "Alamat Email",
-      "email_placeholder": "jane.doe@hospital.org",
-      "message_label": "Ada yang bisa kami bantu?",
-      "message_placeholder": "Beri tahu kami tentang kebutuhan integrasi AI klinis Anda...",
-      "submit": "Kirim Pesan",
-      "disclaimer": "Dengan mengirimkan formulir ini, Anda menyetujui Kebijakan Privasi dan Ketentuan Layanan kami."
+      "title": "Minta demo",
+      "subtitle": "Kami balas dalam 2 hari kerja.",
+      "name_label": "Nama lengkap",
+      "name_placeholder": "dr. Nama Anda",
+      "institution_label": "Rumah sakit atau klinik",
+      "institution_placeholder": "Nama institusi",
+      "email_label": "Email kerja",
+      "email_placeholder": "nama@rumahsakit.id",
+      "message_label": "Kebutuhan Anda",
+      "message_placeholder": "Volume pemeriksaan per hari, unit yang terlibat, target waktu implementasi.",
+      "submit": "Kirim permintaan demo",
+      "disclaimer": "Data yang Anda kirim hanya dipakai untuk menindaklanjuti permintaan demo.",
+      "success_title": "Terkirim",
+      "success_message": "Permintaan demo Anda sudah kami terima. Tim kami akan menghubungi Anda dalam 2 hari kerja.",
+      "error_message": "Gagal mengirim, coba lagi atau hubungi kami langsung lewat email.",
+      "validation_required": "Wajib diisi"
     }
   },
   "footer": {
-    "copyright": "Tata Kelola Klinis PRECIA. Hak cipta dilindungi undang-undang.",
-    "privacy": "Privasi",
-    "terms": "Ketentuan"
+    "tagline": "Precision & Intelligent Analytics for Medicine. Platform AI klinis untuk rumah sakit dan klinik di Indonesia.",
+    "product_label": "Produk",
+    "company_label": "Perusahaan",
+    "contact_label": "Kontak",
+    "company_login": "Masuk aplikasi",
+    "disclaimer": "PRECIA adalah alat bantu skrining. Keputusan klinis tetap berada di tangan dokter.",
+    "copyright": "© 2026 PRECIA",
+    "address": "Depok, Jawa Barat"
   }
 }

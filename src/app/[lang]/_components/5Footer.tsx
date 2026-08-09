@@ -4,24 +4,68 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer({ dict }: { dict: any }) {
+  const productLinks = [
+    { href: "#platform", key: "platform" },
+    { href: "#modul", key: "modules" },
+    { href: "#cara-kerja", key: "how_it_works" },
+    { href: "#kepatuhan", key: "security" },
+  ];
+
   return (
-    <footer className="bg-card border-t border-border py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="flex items-center gap-2">
-          <Image
-            src="/brand/precia-logo.png"
-            alt="PRECIA"
-            width={120}
-            height={36}
-            className="h-auto w-auto max-h-6 object-contain grayscale opacity-60"
-          />
+    <footer className="bg-muted border-t border-border py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10">
+          <div>
+            <Image
+              src="/brand/precia-logo.png"
+              alt="PRECIA"
+              width={120}
+              height={36}
+              className="h-auto w-auto max-h-6 object-contain"
+            />
+            <p className="mt-3.5 text-sm leading-relaxed text-muted-foreground max-w-xs">{dict.footer.tagline}</p>
+            <div className="mt-4 flex items-center gap-5">
+              <Image src="/landingpage/partner-fasilkom.webp" alt="Fasilkom UI" width={100} height={28} className="h-6 w-auto object-contain" />
+              <Image src="/landingpage/partner-fkui.png" alt="FK UI" width={100} height={28} className="h-6 w-auto object-contain" />
+              <Image src="/landingpage/partner-rsui.png" alt="RSUI" width={100} height={28} className="h-6 w-auto object-contain" />
+            </div>
+          </div>
+
+          <div>
+            <div className="text-xs tracking-widest uppercase text-muted-foreground font-semibold">{dict.footer.product_label}</div>
+            <div className="mt-3.5 flex flex-col gap-2.5 text-sm text-foreground/80">
+              {productLinks.map((link) => (
+                <Link key={link.key} href={link.href} className="hover:text-primary transition-colors">
+                  {dict.nav[link.key]}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="text-xs tracking-widest uppercase text-muted-foreground font-semibold">{dict.footer.company_label}</div>
+            <div className="mt-3.5 flex flex-col gap-2.5 text-sm text-foreground/80">
+              <Link href="#kontak" className="hover:text-primary transition-colors">{dict.nav.contact}</Link>
+              <Link href="#kontak" className="hover:text-primary transition-colors">{dict.nav.cta}</Link>
+              <a href="https://app-dev.precia.site" className="hover:text-primary transition-colors">{dict.footer.company_login}</a>
+            </div>
+          </div>
+
+          <div>
+            <div className="text-xs tracking-widest uppercase text-muted-foreground font-semibold">{dict.footer.contact_label}</div>
+            <div className="mt-3.5 text-sm leading-loose text-foreground/80">
+              {dict.contact.email_value}
+              <br />
+              {dict.contact.website_value}
+              <br />
+              {dict.footer.address}
+            </div>
+          </div>
         </div>
-        <p className="text-muted-foreground text-sm text-center md:text-left">
-          &copy; {new Date().getFullYear()} {dict.footer.copyright}
-        </p>
-        <div className="flex items-center gap-6">
-          <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{dict.footer.privacy}</Link>
-          <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{dict.footer.terms}</Link>
+
+        <div className="mt-9 pt-5 border-t border-border flex flex-col sm:flex-row justify-between gap-3 text-xs text-muted-foreground">
+          <div>{dict.footer.disclaimer}</div>
+          <div>{dict.footer.copyright}</div>
         </div>
       </div>
     </footer>

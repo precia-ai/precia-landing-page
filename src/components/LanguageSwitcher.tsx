@@ -27,17 +27,17 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
   };
 
   return (
-    <div className="flex items-center gap-1 bg-white/5 backdrop-blur-md rounded-full p-1 border border-white/10">
+    <div className="flex items-center gap-1 bg-muted rounded-full p-1 border border-border">
       <button
         onClick={() => switchLanguage('id')}
         className={`relative px-3 py-1.5 text-xs font-medium rounded-full transition-colors z-10 ${
-          currentLang === 'id' ? 'text-white' : 'text-white/50 hover:text-white/80'
+          currentLang === 'id' ? 'text-primary-foreground' : 'text-muted-foreground hover:text-foreground'
         }`}
       >
         {currentLang === 'id' && (
           <motion.div
             layoutId="lang-bg"
-            className="absolute inset-0 bg-[#0052ff] rounded-full -z-10 shadow-[0_0_10px_rgba(0,82,255,0.4)]"
+            className="absolute inset-0 bg-primary rounded-full -z-10"
             initial={false}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           />
@@ -47,13 +47,13 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
       <button
         onClick={() => switchLanguage('en')}
         className={`relative px-3 py-1.5 text-xs font-medium rounded-full transition-colors z-10 ${
-          currentLang === 'en' ? 'text-white' : 'text-white/50 hover:text-white/80'
+          currentLang === 'en' ? 'text-primary-foreground' : 'text-muted-foreground hover:text-foreground'
         }`}
       >
         {currentLang === 'en' && (
           <motion.div
             layoutId="lang-bg"
-            className="absolute inset-0 bg-[#0052ff] rounded-full -z-10 shadow-[0_0_10px_rgba(0,82,255,0.4)]"
+            className="absolute inset-0 bg-primary rounded-full -z-10"
             initial={false}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           />

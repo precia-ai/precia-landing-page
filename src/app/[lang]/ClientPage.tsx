@@ -10,10 +10,8 @@ import Footer from "./_components/5Footer";
 export default function ClientPage({ dict, currentLang }: { dict: any, currentLang: string }) {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20">
-      <div className="bg-[#030917] text-white selection:bg-primary/30">
-        <Navbar dict={dict} currentLang={currentLang} />
-        <Hero dict={dict} />
-      </div>
+      <Navbar dict={dict} currentLang={currentLang} />
+      <Hero dict={dict} />
 
       <AIModules dict={dict} />
       <Benefits dict={dict} />

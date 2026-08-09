@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: precia_landing_db
+    ports:
+      - "${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-precia_landing}
+      - POSTGRES_USER=${POSTGRES_USER:-precia_landing}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-precia_landing}
+    restart: no
+
+volumes:
+  postgres_data:
