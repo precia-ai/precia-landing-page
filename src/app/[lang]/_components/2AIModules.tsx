@@ -17,17 +17,27 @@ function HowItWorks({ dict }: { dict: Dictionary }) {
           {dict.how.title}
         </h2>
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-0 lg:gap-6">
           {dict.how.steps.map((step, i: number) => (
-            <div
-              key={i}
-              className="rounded-[1.75rem] bg-card border border-border p-8 shadow-sm"
-            >
-              <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold shadow-accent">
-                {i + 1}
+            <div key={i} className="relative flex lg:flex-col gap-4 lg:gap-0 py-5 lg:py-0">
+              <div className="flex flex-col items-center lg:items-start flex-none">
+                <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold shadow-accent">
+                  {i + 1}
+                </div>
+                {i < dict.how.steps.length - 1 && (
+                  <div className="mt-2 w-px flex-1 bg-border lg:hidden" aria-hidden="true" />
+                )}
               </div>
-              <div className="mt-6 text-xl font-semibold text-foreground">{step.title}</div>
-              <div className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.description}</div>
+              {i < dict.how.steps.length - 1 && (
+                <div
+                  className="hidden lg:block absolute top-5 left-[calc(50%+20px)] right-[calc(-50%+20px)] h-px bg-border"
+                  aria-hidden="true"
+                />
+              )}
+              <div className="lg:mt-4">
+                <div className="text-lg font-semibold text-foreground">{step.title}</div>
+                <div className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{step.description}</div>
+              </div>
             </div>
           ))}
         </div>
