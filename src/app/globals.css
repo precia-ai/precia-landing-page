@@ -88,7 +88,7 @@
 
   /* TYPOGRAPHY */
   --font-sans:
-    "Inter", "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
+    "Satoshi", "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   --text-xs: 0.75rem;
@@ -270,4 +270,69 @@ body {
 
 .skip-link:focus {
   left: 0;
+}
+
+/* ETHEREAL MESH / GLASS LAYER */
+.mesh-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.mesh-glow::before,
+.mesh-glow::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.5;
+}
+
+.mesh-glow::before {
+  top: -12rem;
+  right: -8rem;
+  width: 34rem;
+  height: 34rem;
+  background: radial-gradient(circle, rgba(0, 82, 255, 0.35), transparent 70%);
+}
+
+.mesh-glow::after {
+  bottom: -14rem;
+  left: -10rem;
+  width: 30rem;
+  height: 30rem;
+  background: radial-gradient(circle, rgba(21, 172, 214, 0.28), transparent 70%);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* MARQUEE */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }

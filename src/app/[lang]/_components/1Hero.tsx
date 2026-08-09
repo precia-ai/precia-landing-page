@@ -6,6 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+const partnerLogos = [
+  { src: "/landingpage/partner-fasilkom.webp", alt: "Fakultas Ilmu Komputer Universitas Indonesia" },
+  { src: "/landingpage/partner-fkui.png", alt: "Fakultas Kedokteran Universitas Indonesia" },
+  { src: "/landingpage/partner-rsui.png", alt: "Rumah Sakit Universitas Indonesia" },
+];
+
 export default function Hero({ dict }: { dict: Dictionary }) {
   const stats = [
     { value: dict.hero.stat1_value, label: dict.hero.stat1_label },
@@ -15,8 +21,9 @@ export default function Hero({ dict }: { dict: Dictionary }) {
 
   return (
     <>
-      <section className="pt-36 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+      <section className="relative pt-36 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="mesh-glow" aria-hidden="true" />
+        <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -28,7 +35,13 @@ export default function Hero({ dict }: { dict: Dictionary }) {
 
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.1] tracking-tight font-medium text-foreground text-balance">
               {dict.hero.title_before ? `${dict.hero.title_before} ` : ""}
-              <span className="text-primary italic font-serif">{dict.hero.title_accent}</span>{" "}
+              <span className="text-primary italic">{dict.hero.title_accent}</span>{" "}
+              <span
+                className="inline-block w-11 h-11 sm:w-12 sm:h-12 rounded-full align-middle bg-cover bg-center mx-1 border-2 border-white shadow-accent"
+                style={{ backgroundImage: "url(/landingpage/ui-result-ecg.png)" }}
+                role="img"
+                aria-label={dict.showcase.ecg_alt}
+              />{" "}
               {dict.hero.title_after}
             </h1>
 
@@ -65,33 +78,47 @@ export default function Hero({ dict }: { dict: Dictionary }) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="rounded-xl overflow-hidden border border-border shadow-lg bg-card"
+            className="rounded-[2rem] p-2 bg-white/60 backdrop-blur-md border border-white/70 shadow-lg"
           >
-            <div className="flex items-center gap-2.5 bg-[#0a1b4e] text-white px-4 py-2.5 text-xs tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#3dc2c4]" />
-              {dict.hero.dashboard_caption}
+            <div className="rounded-[calc(2rem-0.5rem)] overflow-hidden border border-border shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] bg-card">
+              <div className="flex items-center gap-2.5 bg-[#0a1b4e] text-white px-4 py-2.5 text-xs tracking-wider">
+                <span className="w-2 h-2 rounded-full bg-[#3dc2c4]" />
+                {dict.hero.dashboard_caption}
+              </div>
+              <Image
+                src="/landingpage/app-dashboard.png"
+                alt={dict.hero.dashboard_caption}
+                width={1641}
+                height={994}
+                className="w-full h-auto block"
+                priority
+              />
             </div>
-            <Image
-              src="/landingpage/app-dashboard.png"
-              alt={dict.hero.dashboard_caption}
-              width={1641}
-              height={994}
-              className="w-full h-auto block"
-              priority
-            />
           </motion.div>
         </div>
       </section>
 
-      <section className="py-7 px-4 sm:px-6 lg:px-8 bg-muted border-y border-border">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center gap-8">
+      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-muted border-y border-border overflow-hidden">
+        <div className="max-w-7xl mx-auto flex items-center gap-8">
           <div className="text-xs tracking-widest uppercase text-muted-foreground font-semibold flex-none">
             {dict.partners.label}
           </div>
-          <div className="flex items-center gap-9 flex-wrap">
-            <Image src="/landingpage/partner-fasilkom.webp" alt="Fakultas Ilmu Komputer Universitas Indonesia" width={160} height={40} className="h-9 w-auto object-contain" />
-            <Image src="/landingpage/partner-fkui.png" alt="Fakultas Kedokteran Universitas Indonesia" width={160} height={40} className="h-9 w-auto object-contain" />
-            <Image src="/landingpage/partner-rsui.png" alt="Rumah Sakit Universitas Indonesia" width={160} height={40} className="h-9 w-auto object-contain" />
+          <div
+            className="flex-1 overflow-hidden"
+            style={{ maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)" }}
+          >
+            <div className="marquee-track flex items-center gap-14 w-max">
+              {[...partnerLogos, ...partnerLogos].map((logo, i) => (
+                <Image
+                  key={i}
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={160}
+                  height={40}
+                  className="h-9 w-auto object-contain flex-none grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
