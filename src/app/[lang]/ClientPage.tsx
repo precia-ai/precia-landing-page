@@ -12,11 +12,12 @@ export default function ClientPage({ dict, currentLang }: { dict: Dictionary, cu
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20">
       <Navbar dict={dict} currentLang={currentLang} />
-      <Hero dict={dict} />
-
-      <AIModules dict={dict} />
-      <Benefits dict={dict} />
-      <ContactUs dict={dict} />
+      <main id="main-content">
+        <Hero dict={dict} />
+        <AIModules dict={dict} />
+        <Benefits dict={dict} />
+        <ContactUs dict={dict} />
+      </main>
       <Footer dict={dict} />
     </div>
   );

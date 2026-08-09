@@ -169,7 +169,7 @@ export default function ContactUs({ dict }: { dict: Dictionary }) {
             <button
               type="submit"
               disabled={isPending}
-              className={`w-full bg-primary hover:bg-accent-secondary px-6 py-3.5 rounded-lg flex items-center justify-center gap-2 text-primary-foreground font-semibold transition-colors ${
+              className={`w-full bg-primary hover:bg-accent-secondary active:scale-[0.98] px-6 py-3.5 rounded-lg flex items-center justify-center gap-2 text-primary-foreground font-semibold transition-all duration-200 shadow-accent hover:shadow-accent-lg ${
                 isPending ? "opacity-70 cursor-not-allowed" : ""
               }`}
             >

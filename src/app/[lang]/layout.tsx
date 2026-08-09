@@ -40,6 +40,9 @@ export default async function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
+        <a href="#main-content" className="skip-link">
+          {lang === "id" ? "Lewati ke konten utama" : "Skip to main content"}
+        </a>
         {children}
       </body>
     </html>

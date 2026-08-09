@@ -57,7 +57,7 @@ export default function Navbar({ dict, currentLang }: { dict: Dictionary; curren
             </a>
             <Link
               href="#kontak"
-              className="text-sm font-semibold px-5 py-2.5 rounded-full bg-primary text-primary-foreground hover:bg-accent-secondary transition-colors"
+              className="text-sm font-semibold px-5 py-2.5 rounded-full bg-primary text-primary-foreground hover:bg-accent-secondary active:scale-[0.97] transition-all duration-200"
             >
               {dict.nav.cta}
             </Link>

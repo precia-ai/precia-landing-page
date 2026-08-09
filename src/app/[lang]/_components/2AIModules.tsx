@@ -19,7 +19,10 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {dict.problems.items.map((item, i: number) => (
-              <div key={i} className="rounded-xl border border-border bg-card p-6">
+              <div
+                key={i}
+                className="rounded-xl bg-card p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+              >
                 <div className="text-[11px] tracking-widest uppercase font-semibold text-amber-700">
                   {item.tag}
                 </div>
@@ -45,8 +48,11 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {dict.how.steps.map((step, i: number) => (
-              <div key={i} className="rounded-xl border border-border bg-card p-6">
-                <div className="w-9 h-9 rounded-md bg-primary text-primary-foreground flex items-center justify-center font-semibold">
+              <div
+                key={i}
+                className="rounded-xl bg-card p-6 shadow-sm hover:shadow-accent transition-shadow duration-300"
+              >
+                <div className="w-9 h-9 rounded-md bg-primary text-primary-foreground flex items-center justify-center font-semibold shadow-accent">
                   {i + 1}
                 </div>
                 <div className="mt-3.5 text-lg font-semibold text-foreground">{step.title}</div>
@@ -70,54 +76,75 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
             <p className="text-muted-foreground max-w-sm leading-relaxed">{dict.modules.subtitle}</p>
           </div>
 
-          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {dict.modules.items.map((mod, i: number) => {
-              const dotColor = ["bg-primary", "bg-brand-cyan", "bg-brand-turquoise", "bg-muted-foreground"][i % 4];
-              const isRoadmap = mod.status === "roadmap";
-              const statusLabel =
-                mod.status === "available"
-                  ? dict.modules.status_available
-                  : mod.status === "research"
-                  ? dict.modules.status_research
-                  : dict.modules.status_roadmap;
-              const statusClass =
-                mod.status === "available"
-                  ? "bg-teal-100 text-teal-700"
-                  : mod.status === "research"
-                  ? "bg-info-100 text-info-700"
-                  : "bg-muted text-muted-foreground";
-              return (
-                <div
-                  key={i}
-                  className={`rounded-xl border p-6 ${
-                    isRoadmap ? "border-dashed border-border bg-muted/40" : "border-border bg-card"
-                  }`}
-                >
-                  <div className="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-foreground">
-                    <span className={`w-2 h-2 rounded-full ${dotColor}`} />
-                    {mod.category}
-                  </div>
-                  <div className="mt-4 flex justify-between items-center gap-3">
-                    <span className="text-lg font-semibold text-foreground">{mod.name}</span>
-                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full whitespace-nowrap ${statusClass}`}>
-                      {statusLabel}
-                    </span>
-                  </div>
-                  <div className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{mod.description}</div>
-                  <div className="mt-4 pt-3.5 border-t border-border text-sm leading-relaxed text-muted-foreground">
-                    {mod.status === "available" ? (
-                      <>
-                        <span className="font-semibold text-foreground">{dict.modules.roadmap_prefix}</span>{" "}
-                        {mod.roadmap}
-                      </>
-                    ) : (
-                      mod.roadmap
-                    )}
-                  </div>
+          {(() => {
+            const mainModules = dict.modules.items.filter((m) => m.status !== "roadmap");
+            const roadmapModules = dict.modules.items.filter((m) => m.status === "roadmap");
+            const dotColors = ["bg-primary", "bg-brand-cyan", "bg-brand-turquoise"];
+
+            return (
+              <>
+                <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {mainModules.map((mod, i: number) => {
+                    const isAvailable = mod.status === "available";
+                    return (
+                      <div
+                        key={i}
+                        className={`rounded-xl bg-card p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 ${
+                          isAvailable ? "ring-1 ring-primary/10" : ""
+                        }`}
+                      >
+                        <div className="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-foreground">
+                          <span className={`w-2 h-2 rounded-full ${dotColors[i % 3]}`} />
+                          {mod.category}
+                        </div>
+                        <div className="mt-4 flex justify-between items-center gap-3">
+                          <span className="text-lg font-semibold text-foreground">{mod.name}</span>
+                          <span
+                            className={`text-xs font-semibold px-2.5 py-1 rounded-full whitespace-nowrap ${
+                              isAvailable ? "bg-teal-100 text-teal-700" : "bg-info-100 text-info-700"
+                            }`}
+                          >
+                            {isAvailable ? dict.modules.status_available : dict.modules.status_research}
+                          </span>
+                        </div>
+                        <div className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{mod.description}</div>
+                        <div className="mt-4 pt-3.5 border-t border-border text-sm leading-relaxed text-muted-foreground">
+                          {isAvailable ? (
+                            <>
+                              <span className="font-semibold text-foreground">{dict.modules.roadmap_prefix}</span>{" "}
+                              {mod.roadmap}
+                            </>
+                          ) : (
+                            mod.roadmap
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
-          </div>
+
+                {roadmapModules.map((mod, i: number) => (
+                  <div
+                    key={i}
+                    className="mt-5 rounded-xl border border-dashed border-border bg-muted/40 p-6 flex flex-wrap items-center justify-between gap-4"
+                  >
+                    <div>
+                      <div className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">
+                        {mod.category}
+                      </div>
+                      <div className="mt-1 text-base font-semibold text-foreground">{mod.description}</div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-muted text-muted-foreground whitespace-nowrap">
+                        {dict.modules.status_roadmap}
+                      </span>
+                      <span className="text-sm text-muted-foreground">{mod.roadmap}</span>
+                    </div>
+                  </div>
+                ))}
+              </>
+            );
+          })()}
         </div>
       </section>
 
@@ -131,7 +158,7 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
 
           <div className="mt-9 grid md:grid-cols-2 gap-6">
             <div>
-              <div className="rounded-xl border border-border overflow-hidden shadow-lg bg-card">
+              <div className="rounded-xl border border-border overflow-hidden shadow-lg hover:shadow-accent-lg hover:-translate-y-0.5 transition-all duration-300 bg-card">
                 <Image
                   src="/landingpage/ui-result-ecg.png"
                   alt={dict.showcase.ecg_alt}
@@ -144,7 +171,7 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
               <div className="mt-3 text-sm leading-relaxed text-muted-foreground">{dict.showcase.ecg_caption}</div>
             </div>
             <div>
-              <div className="rounded-xl border border-border overflow-hidden shadow-lg bg-card">
+              <div className="rounded-xl border border-border overflow-hidden shadow-lg hover:shadow-accent-lg hover:-translate-y-0.5 transition-all duration-300 bg-card">
                 <Image
                   src="/landingpage/ui-result-uroflow.png"
                   alt={dict.showcase.uroflow_alt}

@@ -221,6 +221,12 @@
   --radius-lg: var(--radius-lg);
   --radius-md: var(--radius-md);
   --radius-sm: var(--radius-sm);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-accent: var(--shadow-accent);
+  --shadow-accent-lg: var(--shadow-accent-lg);
 }
 
 @layer base {
@@ -235,10 +241,33 @@
 
 html {
   font-family: var(--font-sans);
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 var(--radius-md) 0;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.skip-link:focus {
+  left: 0;
 }

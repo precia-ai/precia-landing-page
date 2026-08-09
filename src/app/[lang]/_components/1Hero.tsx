@@ -39,13 +39,13 @@ export default function Hero({ dict }: { dict: Dictionary }) {
             <div className="mt-8 flex flex-wrap gap-3.5">
               <Link
                 href="#kontak"
-                className="px-7 py-3.5 rounded-full bg-primary hover:bg-accent-secondary text-primary-foreground font-semibold transition-colors"
+                className="px-7 py-3.5 rounded-full bg-primary hover:bg-accent-secondary active:scale-[0.97] text-primary-foreground font-semibold transition-all duration-200 shadow-accent hover:shadow-accent-lg"
               >
                 {dict.hero.cta_primary}
               </Link>
               <Link
                 href="#modul"
-                className="px-7 py-3.5 rounded-full bg-secondary hover:bg-border text-secondary-foreground font-semibold transition-colors"
+                className="px-7 py-3.5 rounded-full bg-secondary hover:bg-border active:scale-[0.97] text-secondary-foreground font-semibold transition-all duration-200"
               >
                 {dict.hero.cta_secondary}
               </Link>
