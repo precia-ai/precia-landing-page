@@ -7,6 +7,7 @@ import AIModules from "./_components/2AIModules";
 import Benefits from "./_components/3Benefits";
 import ContactUs from "./_components/4ContactUs";
 import Footer from "./_components/5Footer";
+import FAQ from "./_components/6FAQ";
 
 export default function ClientPage({ dict, currentLang }: { dict: Dictionary, currentLang: string }) {
   return (
@@ -14,8 +15,9 @@ export default function ClientPage({ dict, currentLang }: { dict: Dictionary, cu
       <Navbar dict={dict} currentLang={currentLang} />
       <main id="main-content">
         <Hero dict={dict} />
-        <AIModules dict={dict} />
+        <AIModules dict={dict} currentLang={currentLang} />
         <Benefits dict={dict} />
+        <FAQ dict={dict} />
         <ContactUs dict={dict} />
       </main>
       <Footer dict={dict} currentLang={currentLang} />

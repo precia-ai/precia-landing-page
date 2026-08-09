@@ -29,7 +29,8 @@
     "dashboard_caption": "PRECIA clinical dashboard"
   },
   "partners": {
-    "label": "Developed with"
+    "label": "Developed with",
+    "description": "PRECIA's AI models are developed alongside research from Universitas Indonesia's Faculty of Computer Science and Faculty of Medicine. The AI-ECG module has also been tested end-to-end by our RSUI (Universitas Indonesia Hospital) tenant in our test environment, from ECG image upload through to AI output."
   },
   "problems": {
     "eyebrow": "Problems we solve",
@@ -119,6 +120,36 @@
     "uroflow_alt": "AI-BOO Multimodal result with uroflowmetry waveform in PRECIA",
     "uroflow_caption": "AI-BOO Multimodal: the part of the uroflowmetry waveform that most influenced the prediction is shown too."
   },
+  "faq": {
+    "eyebrow": "Frequently asked",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "What is PRECIA?",
+        "answer": "PRECIA is a clinical AI platform for hospitals and clinics. We run several AI screening modules (currently AI-ECG and AI-BOO Multimodal) in one system, with the doctor as the final decision-maker and every action logged to the audit trail."
+      },
+      {
+        "question": "How does PRECIA's AI-ECG work?",
+        "answer": "AI-ECG analyzes an uploaded 12-lead ECG image and classifies the result as Normal or Abnormal, as an indicator of possible low Ejection Fraction, along with a confidence score and a reading guide. This module is live in PRECIA production."
+      },
+      {
+        "question": "Does the AI result replace a doctor's decision?",
+        "answer": "No. Every PRECIA AI module is a screening decision-support tool, not a replacement for clinical diagnosis. For cases with an abnormal indication, confirmation via standard clinical examination is still required."
+      },
+      {
+        "question": "How long does an AI screening result take?",
+        "answer": "For a standard request, AI-ECG and AI-BOO results typically come back within seconds to minutes, depending on server load at the time."
+      },
+      {
+        "question": "Does PRECIA have BPOM/Ministry of Health regulatory clearance?",
+        "answer": "Not yet. We're transparent about this because it matters for your clinical decisions. Our AI modules are pilot-stage and being trialed with partner institutions. Contact us at contact@precia.site for the current status."
+      },
+      {
+        "question": "Which AI modules are available today?",
+        "answer": "AI-ECG (EF Screening) for cardiology and AI-BOO Multimodal for urology are live on our platform. AI-Ortho is in development. New modules are added based on what partner hospitals and clinics need."
+      }
+    ]
+  },
   "platform": {
     "eyebrow": "Platform and compliance",
     "title": "Safe across many units, audit-ready",
@@ -148,7 +179,7 @@
     "email_value": "hello@precia.site",
     "contacts": [
       { "name": "Muhammad Febrian Rachmadi", "role": "Lead of Product", "email": "febrianrachmadi@cs.ui.ac.id", "phone": "+62 858 1055 6865" },
-      { "name": "Syahrul Apriansyah", "role": "Product Manager", "email": "apriansyah.syahrul@gmail.com", "phone": "+62 857 7806 0482" }
+      { "name": "Syahrul Apriansyah", "role": "Product Manager", "email": "contact@precia.site", "phone": "+62 857 7806 0482" }
     ],
     "form": {
       "title": "Schedule a demo",

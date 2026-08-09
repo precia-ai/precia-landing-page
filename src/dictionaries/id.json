@@ -29,7 +29,8 @@
     "dashboard_caption": "Dashboard klinis PRECIA"
   },
   "partners": {
-    "label": "Dikembangkan bersama"
+    "label": "Dikembangkan bersama",
+    "description": "Model AI PRECIA dikembangkan bersama riset dari Fakultas Ilmu Komputer UI dan Fakultas Kedokteran UI. Modul AI-ECG juga sudah diuji coba end-to-end oleh tenant RSUI (Rumah Sakit Universitas Indonesia) di lingkungan pengujian kami, dari unggah citra ECG sampai hasil AI keluar."
   },
   "problems": {
     "eyebrow": "Masalah yang kami selesaikan",
@@ -119,6 +120,36 @@
     "uroflow_alt": "Hasil AI-BOO Multimodal dengan waveform uroflowmetry di PRECIA",
     "uroflow_caption": "AI-BOO Multimodal: bagian waveform uroflowmetry yang paling memengaruhi prediksi ikut ditampilkan."
   },
+  "faq": {
+    "eyebrow": "Pertanyaan umum",
+    "title": "Pertanyaan yang sering ditanyakan",
+    "items": [
+      {
+        "question": "Apa itu PRECIA?",
+        "answer": "PRECIA adalah platform AI klinis untuk rumah sakit dan klinik. Kami menjalankan beberapa modul AI skrining (saat ini AI-ECG dan AI-BOO Multimodal) dalam satu sistem, dengan dokter tetap sebagai pengambil keputusan akhir dan setiap aktivitas tercatat di audit trail."
+      },
+      {
+        "question": "Bagaimana AI-ECG PRECIA bekerja?",
+        "answer": "AI-ECG menganalisis citra ECG 12-lead yang diunggah dan mengklasifikasikan hasil sebagai Normal atau Abnormal, sebagai indikasi kemungkinan Ejection Fraction rendah, lengkap dengan confidence score dan panduan membaca hasil. Modul ini sudah berjalan di produksi PRECIA."
+      },
+      {
+        "question": "Apakah hasil AI menggantikan keputusan dokter?",
+        "answer": "Tidak. Semua modul AI PRECIA adalah alat bantu skrining (decision support), bukan pengganti diagnosis klinis. Untuk kasus dengan indikasi abnormal, konfirmasi lewat pemeriksaan klinis standar tetap diperlukan."
+      },
+      {
+        "question": "Berapa lama hasil skrining AI keluar?",
+        "answer": "Untuk permintaan standar, hasil AI-ECG dan AI-BOO biasanya keluar dalam hitungan detik hingga menit, tergantung beban server saat itu."
+      },
+      {
+        "question": "Apakah PRECIA sudah punya izin edar atau registrasi resmi dari BPOM/Kemenkes?",
+        "answer": "Saat ini belum. Kami transparan soal ini karena penting untuk keputusan klinis Anda. Modul AI kami berstatus pilot/uji coba dan sedang berjalan bersama institusi mitra. Hubungi tim kami di contact@precia.site untuk status terkini."
+      },
+      {
+        "question": "Modul AI apa saja yang sudah tersedia?",
+        "answer": "AI-ECG (EF Screening) untuk kardiologi dan AI-BOO Multimodal untuk urologi sudah berjalan di platform kami. AI-Ortho sedang dalam pengembangan. Modul baru ditambahkan sesuai kebutuhan rumah sakit dan klinik mitra."
+      }
+    ]
+  },
   "platform": {
     "eyebrow": "Platform dan kepatuhan",
     "title": "Aman dipakai banyak unit, siap diaudit",
@@ -148,7 +179,7 @@
     "email_value": "hello@precia.site",
     "contacts": [
       { "name": "Muhammad Febrian Rachmadi", "role": "Lead of Product", "email": "febrianrachmadi@cs.ui.ac.id", "phone": "+62 858 1055 6865" },
-      { "name": "Syahrul Apriansyah", "role": "Product Manager", "email": "apriansyah.syahrul@gmail.com", "phone": "+62 857 7806 0482" }
+      { "name": "Syahrul Apriansyah", "role": "Product Manager", "email": "contact@precia.site", "phone": "+62 857 7806 0482" }
     ],
     "form": {
       "title": "Jadwalkan demo",

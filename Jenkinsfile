@@ -111,6 +111,13 @@ pipeline {
                 ])
             }
         }
+
+        stage('Ping IndexNow') {
+            when { expression { env.GIT_BRANCH == 'origin/main' } }
+            steps {
+                sh 'sleep 15 && node scripts/indexnow-submit.mjs || true'
+            }
+        }
     }
 
     post {

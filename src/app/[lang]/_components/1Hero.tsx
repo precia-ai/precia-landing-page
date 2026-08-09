@@ -7,9 +7,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const partnerLogos = [
-  { src: "/landingpage/partner-fasilkom.webp", alt: "Fakultas Ilmu Komputer Universitas Indonesia" },
-  { src: "/landingpage/partner-fkui.png", alt: "Fakultas Kedokteran Universitas Indonesia" },
-  { src: "/landingpage/partner-rsui.png", alt: "Rumah Sakit Universitas Indonesia" },
+  { src: "/landingpage/partner-fasilkom.webp", alt: "Fakultas Ilmu Komputer Universitas Indonesia", href: "https://cs.ui.ac.id" },
+  { src: "/landingpage/partner-fkui.png", alt: "Fakultas Kedokteran Universitas Indonesia", href: "https://fk.ui.ac.id" },
+  { src: "/landingpage/partner-rsui.png", alt: "Rumah Sakit Universitas Indonesia", href: "https://rs.ui.ac.id" },
 ];
 
 export default function Hero({ dict }: { dict: Dictionary }) {
@@ -103,17 +103,21 @@ export default function Hero({ dict }: { dict: Dictionary }) {
           >
             <div className="marquee-track flex items-center gap-16 w-max">
               {[...partnerLogos, ...partnerLogos].map((logo, i) => (
-                <Image
-                  key={i}
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={260}
-                  height={70}
-                  className="h-16 w-auto object-contain flex-none opacity-90 hover:opacity-100 transition-opacity duration-300"
-                />
+                <a key={i} href={logo.href} target="_blank" rel="noopener noreferrer" className="flex-none">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={260}
+                    height={70}
+                    className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                  />
+                </a>
               ))}
             </div>
           </div>
+        </div>
+        <div className="max-w-7xl mx-auto mt-4 text-sm leading-relaxed text-muted-foreground">
+          {dict.partners.description}
         </div>
       </section>
     </>

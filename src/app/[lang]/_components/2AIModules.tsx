@@ -3,8 +3,14 @@
 import type { Dictionary } from "@/lib/dictionary";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+
+const moduleSlugs: Record<string, string> = {
+  "AI-ECG (EF Screening)": "ai-ecg",
+  "AI-BOO Multimodal": "ai-boo",
+};
 
 function HowItWorks({ dict }: { dict: Dictionary }) {
   return (
@@ -92,7 +98,7 @@ function ShowcaseStack({ dict }: { dict: Dictionary }) {
   );
 }
 
-export default function AIModules({ dict }: { dict: Dictionary }) {
+export default function AIModules({ dict, currentLang }: { dict: Dictionary; currentLang: string }) {
   return (
     <>
       {/* Masalah yang kami selesaikan - horizontal accordion */}
@@ -153,40 +159,51 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
                 <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                   {mainModules.map((mod, i: number) => {
                     const isAvailable = mod.status === "available";
-                    return (
-                      <div
-                        key={i}
-                        className={`rounded-2xl p-1.5 bg-white/50 backdrop-blur-sm border border-white/60 shadow-sm hover:shadow-lg transition-all duration-300 ${
-                          isAvailable ? "ring-1 ring-primary/10" : ""
-                        }`}
-                      >
-                        <div className="rounded-[calc(1rem-0.375rem)] bg-card p-5">
-                          <div className="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-foreground">
-                            <span className={`w-2 h-2 rounded-full ${dotColors[i % 3]}`} />
-                            {mod.category}
-                          </div>
-                          <div className="mt-4 flex justify-between items-center gap-3">
-                            <span className="text-lg font-semibold text-foreground">{mod.name}</span>
-                            <span
-                              className={`text-xs font-semibold px-2.5 py-1 rounded-full whitespace-nowrap ${
-                                isAvailable ? "bg-teal-100 text-teal-700" : "bg-info-100 text-info-700"
-                              }`}
-                            >
-                              {isAvailable ? dict.modules.status_available : dict.modules.status_research}
-                            </span>
-                          </div>
-                          <div className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{mod.description}</div>
-                          <div className="mt-4 pt-3.5 border-t border-border text-sm leading-relaxed text-muted-foreground">
-                            {isAvailable ? (
-                              <>
-                                <span className="font-semibold text-foreground">{dict.modules.roadmap_prefix}</span>{" "}
-                                {mod.roadmap}
-                              </>
-                            ) : (
-                              mod.roadmap
-                            )}
-                          </div>
+                    const slug = moduleSlugs[mod.name];
+                    const cardInner = (
+                      <div className="rounded-[calc(1rem-0.375rem)] bg-card p-5">
+                        <div className="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-foreground">
+                          <span className={`w-2 h-2 rounded-full ${dotColors[i % 3]}`} />
+                          {mod.category}
                         </div>
+                        <div className="mt-4 flex justify-between items-center gap-3">
+                          <span className="text-lg font-semibold text-foreground">{mod.name}</span>
+                          <span
+                            className={`text-xs font-semibold px-2.5 py-1 rounded-full whitespace-nowrap ${
+                              isAvailable ? "bg-teal-100 text-teal-700" : "bg-info-100 text-info-700"
+                            }`}
+                          >
+                            {isAvailable ? dict.modules.status_available : dict.modules.status_research}
+                          </span>
+                        </div>
+                        <div className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{mod.description}</div>
+                        <div className="mt-4 pt-3.5 border-t border-border text-sm leading-relaxed text-muted-foreground">
+                          {isAvailable ? (
+                            <>
+                              <span className="font-semibold text-foreground">{dict.modules.roadmap_prefix}</span>{" "}
+                              {mod.roadmap}
+                            </>
+                          ) : (
+                            mod.roadmap
+                          )}
+                        </div>
+                        {slug && (
+                          <div className="mt-3 text-sm font-semibold text-primary">
+                            {currentLang === "id" ? "Selengkapnya →" : "Learn more →"}
+                          </div>
+                        )}
+                      </div>
+                    );
+                    const cardClass = `rounded-2xl p-1.5 bg-white/50 backdrop-blur-sm border border-white/60 shadow-sm hover:shadow-lg transition-all duration-300 ${
+                      isAvailable ? "ring-1 ring-primary/10" : ""
+                    }`;
+                    return slug ? (
+                      <Link key={i} href={`/${currentLang}/modul/${slug}`} className={cardClass}>
+                        {cardInner}
+                      </Link>
+                    ) : (
+                      <div key={i} className={cardClass}>
+                        {cardInner}
                       </div>
                     );
                   })}
