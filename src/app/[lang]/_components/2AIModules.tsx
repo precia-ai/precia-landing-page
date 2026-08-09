@@ -129,25 +129,27 @@ export default function AIModules({ dict }: { dict: any }) {
 
           <div className="mt-9 grid md:grid-cols-2 gap-6">
             <div>
-              <div className="relative rounded-xl border border-border overflow-hidden shadow-lg h-[420px]">
+              <div className="rounded-xl border border-border overflow-hidden shadow-lg bg-card">
                 <Image
                   src="/landingpage/ui-result-ecg.png"
                   alt={dict.showcase.ecg_alt}
-                  fill
+                  width={1300}
+                  height={460}
                   sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover object-top"
+                  className="w-full h-auto block"
                 />
               </div>
               <div className="mt-3 text-sm leading-relaxed text-muted-foreground">{dict.showcase.ecg_caption}</div>
             </div>
             <div>
-              <div className="relative rounded-xl border border-border overflow-hidden shadow-lg h-[420px]">
+              <div className="rounded-xl border border-border overflow-hidden shadow-lg bg-card">
                 <Image
                   src="/landingpage/ui-result-uroflow.png"
                   alt={dict.showcase.uroflow_alt}
-                  fill
+                  width={1320}
+                  height={820}
                   sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover object-top"
+                  className="w-full h-auto block"
                 />
               </div>
               <div className="mt-3 text-sm leading-relaxed text-muted-foreground">{dict.showcase.uroflow_caption}</div>

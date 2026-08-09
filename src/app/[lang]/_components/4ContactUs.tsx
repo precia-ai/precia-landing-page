@@ -67,7 +67,6 @@ export default function ContactUs({ dict }: { dict: any }) {
 
         <div className="rounded-2xl border border-border bg-muted p-7 lg:p-8">
           <div className="text-xl font-semibold text-foreground">{dict.contact.form.title}</div>
-          <div className="mt-1.5 text-sm text-muted-foreground">{dict.contact.form.subtitle}</div>
 
           <AnimatePresence mode="wait">
             {state.message && (

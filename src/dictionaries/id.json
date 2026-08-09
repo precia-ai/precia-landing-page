@@ -10,8 +10,9 @@
   },
   "hero": {
     "badge": "Platform AI klinis",
-    "title_before": "Skrining lebih cepat, keputusan tetap di tangan",
-    "title_accent": "dokter",
+    "title_before": "Skrining",
+    "title_accent": "lebih cepat",
+    "title_after": "keputusan tetap di tangan dokter",
     "subtitle": "PRECIA menjalankan modul AI klinis, dari ECG sampai uroflowmetry, dalam satu sistem. Rumah sakit tidak perlu memasang aplikasi baru setiap ada modul baru.",
     "cta_primary": "Jadwalkan demo",
     "cta_secondary": "Lihat modul AI",
@@ -146,8 +147,8 @@
       { "name": "Syahrul Apriansyah", "role": "Product Manager", "email": "apriansyah.syahrul@gmail.com", "phone": "+62 857 7806 0482" }
     ],
     "form": {
-      "title": "Minta demo",
-      "subtitle": "Kami balas dalam 2 hari kerja.",
+      "title": "Jadwalkan demo",
+      "subtitle": "",
       "name_label": "Nama lengkap",
       "name_placeholder": "dr. Nama Anda",
       "institution_label": "Rumah sakit atau klinik",
@@ -156,10 +157,10 @@
       "email_placeholder": "nama@rumahsakit.id",
       "message_label": "Kebutuhan Anda",
       "message_placeholder": "Volume pemeriksaan per hari, unit yang terlibat, target waktu implementasi.",
-      "submit": "Kirim permintaan demo",
+      "submit": "Jadwalkan demo",
       "disclaimer": "Data yang Anda kirim hanya dipakai untuk menindaklanjuti permintaan demo.",
       "success_title": "Terkirim",
-      "success_message": "Permintaan demo Anda sudah kami terima. Tim kami akan menghubungi Anda dalam 2 hari kerja.",
+      "success_message": "Permintaan demo Anda sudah kami terima. Tim kami akan menghubungi Anda.",
       "error_message": "Gagal mengirim, coba lagi atau hubungi kami langsung lewat email.",
       "validation_required": "Wajib diisi"
     }

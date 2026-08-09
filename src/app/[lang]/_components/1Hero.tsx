@@ -25,8 +25,9 @@ export default function Hero({ dict }: { dict: any }) {
             </span>
 
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.1] tracking-tight font-medium text-foreground text-balance">
-              {dict.hero.title_before}{" "}
-              <span className="text-primary italic font-serif">{dict.hero.title_accent}</span>
+              {dict.hero.title_before ? `${dict.hero.title_before} ` : ""}
+              <span className="text-primary italic font-serif">{dict.hero.title_accent}</span>{" "}
+              {dict.hero.title_after}
             </h1>
 
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground max-w-xl">

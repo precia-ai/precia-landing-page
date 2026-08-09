@@ -10,8 +10,9 @@
   },
   "hero": {
     "badge": "Clinical AI platform",
-    "title_before": "Faster screening, decisions still made by the",
-    "title_accent": "doctor",
+    "title_before": "",
+    "title_accent": "Faster",
+    "title_after": "screening, decisions still made by the doctor",
     "subtitle": "PRECIA runs clinical AI modules, from ECG to uroflowmetry, in one system. Hospitals don't need a new app every time a new module ships.",
     "cta_primary": "Schedule a demo",
     "cta_secondary": "See AI modules",
@@ -146,8 +147,8 @@
       { "name": "Syahrul Apriansyah", "role": "Product Manager", "email": "apriansyah.syahrul@gmail.com", "phone": "+62 857 7806 0482" }
     ],
     "form": {
-      "title": "Request a demo",
-      "subtitle": "We reply within 2 business days.",
+      "title": "Schedule a demo",
+      "subtitle": "",
       "name_label": "Full name",
       "name_placeholder": "dr. Your Name",
       "institution_label": "Hospital or clinic",
@@ -156,7 +157,7 @@
       "email_placeholder": "name@hospital.id",
       "message_label": "What do you need?",
       "message_placeholder": "Daily examination volume, units involved, target implementation timeline.",
-      "submit": "Send demo request",
+      "submit": "Schedule a demo",
       "disclaimer": "Data you submit is only used to follow up on your demo request.",
       "success_title": "Sent",
       "success_message": "We've received your demo request. Our team will reach out within 2 business days.",
