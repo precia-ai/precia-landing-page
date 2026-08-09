@@ -36,12 +36,6 @@ export default function Hero({ dict }: { dict: Dictionary }) {
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.1] tracking-tight font-medium text-foreground text-balance">
               {dict.hero.title_before ? `${dict.hero.title_before} ` : ""}
               <span className="text-primary italic">{dict.hero.title_accent}</span>{" "}
-              <span
-                className="inline-block w-11 h-11 sm:w-12 sm:h-12 rounded-full align-middle bg-cover bg-center mx-1 border-2 border-white shadow-accent"
-                style={{ backgroundImage: "url(/landingpage/ui-result-ecg.png)" }}
-                role="img"
-                aria-label={dict.showcase.ecg_alt}
-              />{" "}
               {dict.hero.title_after}
             </h1>
 
@@ -98,7 +92,7 @@ export default function Hero({ dict }: { dict: Dictionary }) {
         </div>
       </section>
 
-      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-muted border-y border-border overflow-hidden">
+      <section className="py-10 px-4 sm:px-6 lg:px-8 bg-muted border-y border-border overflow-hidden">
         <div className="max-w-7xl mx-auto flex items-center gap-8">
           <div className="text-xs tracking-widest uppercase text-muted-foreground font-semibold flex-none">
             {dict.partners.label}
@@ -107,15 +101,15 @@ export default function Hero({ dict }: { dict: Dictionary }) {
             className="flex-1 overflow-hidden"
             style={{ maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)" }}
           >
-            <div className="marquee-track flex items-center gap-14 w-max">
+            <div className="marquee-track flex items-center gap-16 w-max">
               {[...partnerLogos, ...partnerLogos].map((logo, i) => (
                 <Image
                   key={i}
                   src={logo.src}
                   alt={logo.alt}
-                  width={160}
-                  height={40}
-                  className="h-9 w-auto object-contain flex-none grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  width={260}
+                  height={70}
+                  className="h-16 w-auto object-contain flex-none opacity-90 hover:opacity-100 transition-opacity duration-300"
                 />
               ))}
             </div>

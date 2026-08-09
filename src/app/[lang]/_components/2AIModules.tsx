@@ -137,22 +137,22 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
             {dict.problems.title}
           </h2>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-3">
+          <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:items-stretch">
             {dict.problems.items.map((item, i: number) => (
               <div
                 key={i}
-                className="group relative flex-1 sm:hover:flex-[2.2] sm:min-w-0 rounded-2xl bg-card border border-border overflow-hidden transition-[flex-grow] duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] p-6"
+                className="group relative flex-1 sm:hover:flex-[1.15] sm:min-w-0 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-md overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] p-6"
               >
                 <div className="text-[11px] tracking-widest uppercase font-semibold text-amber-700">
                   {item.tag}
                 </div>
-                <div className="mt-2 text-lg font-semibold text-foreground leading-snug whitespace-nowrap sm:whitespace-normal">
+                <div className="mt-2 text-lg font-semibold text-foreground leading-snug">
                   {item.title}
                 </div>
-                <div className="mt-2 text-sm leading-relaxed text-muted-foreground sm:max-w-[260px] sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                <div className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {item.description}
                 </div>
-                <div className="mt-4 pt-3.5 border-t border-border text-sm leading-relaxed sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 delay-150">
+                <div className="mt-4 pt-3.5 border-t border-border text-sm leading-relaxed">
                   <span className="font-semibold text-primary">{dict.problems.solution_prefix}</span>{" "}
                   {item.solution}
                 </div>
