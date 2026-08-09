@@ -36,7 +36,7 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
       </section>
 
       {/* Cara kerja */}
-      <section id="cara-kerja" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted border-y border-border">
+      <section id="cara-kerja" className="py-24 px-4 sm:px-6 lg:px-8 bg-muted border-y border-border">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground text-balance">
             {dict.how.title}
@@ -155,7 +155,7 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
       </section>
 
       {/* Tampilan produk */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground text-balance">
             {dict.showcase.title}
