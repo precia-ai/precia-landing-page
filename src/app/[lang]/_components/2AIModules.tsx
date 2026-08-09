@@ -162,7 +162,7 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
           </h2>
 
           <div className="mt-9 grid md:grid-cols-2 gap-6">
-            <div>
+            <div className="group">
               <div className="rounded-xl border border-border overflow-hidden shadow-lg hover:shadow-accent-lg hover:-translate-y-0.5 transition-all duration-300 bg-card">
                 <Image
                   src="/landingpage/ui-result-ecg.png"
@@ -170,12 +170,12 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
                   width={1300}
                   height={460}
                   sizes="(min-width: 768px) 50vw, 100vw"
-                  className="w-full h-auto block"
+                  className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
               <div className="mt-3 text-sm leading-relaxed text-muted-foreground">{dict.showcase.ecg_caption}</div>
             </div>
-            <div>
+            <div className="group">
               <div className="rounded-xl border border-border overflow-hidden shadow-lg hover:shadow-accent-lg hover:-translate-y-0.5 transition-all duration-300 bg-card">
                 <Image
                   src="/landingpage/ui-result-uroflow.png"
@@ -183,7 +183,7 @@ export default function AIModules({ dict }: { dict: Dictionary }) {
                   width={1320}
                   height={820}
                   sizes="(min-width: 768px) 50vw, 100vw"
-                  className="w-full h-auto block"
+                  className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
               <div className="mt-3 text-sm leading-relaxed text-muted-foreground">{dict.showcase.uroflow_caption}</div>
