@@ -146,7 +146,7 @@
       },
       {
         "question": "Modul apa yang sedang dikembangkan setelah ini?",
-        "answer": "Dua arah riset sedang berjalan: skrining kelainan katup mitral (regurgitasi/stenosis) dari citra ECG yang sama dengan AI-ECG, dan skrining Detrusor Underactivity dari data klinis pasien urologi. Keduanya masih berstatus riset/pilot, model hasil skripsi sudah ada tapi belum dibungkus jadi layanan produksi. Kami transparan soal tahapnya karena ini menyangkut keputusan klinis Anda."
+        "answer": "Dua arah riset sedang berjalan: skrining kelainan katup mitral (regurgitasi/stenosis) dari citra ECG yang sama dengan AI-ECG, dan skrining Detrusor Underactivity dari data klinis pasien urologi. Keduanya masih berstatus riset/pilot, model hasil riset penelitian sudah ada tapi belum dibungkus jadi layanan produksi. Kami transparan soal tahapnya karena ini menyangkut keputusan klinis Anda."
       }
     ]
   },

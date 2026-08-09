@@ -22,7 +22,7 @@ const content: Record<'id' | 'en', { title: string; sections: { heading: string;
       },
       {
         heading: 'Asal-usul: dari riset ke MetriSnap ke PRECIA',
-        body: 'Modul ini berawal dari riset skripsi tim Fakultas Ilmu Komputer UI (Amanda Nurul Izzah, Kausar Meutuwah, Risa Lestari, dibimbing Muhammad Febrian Rachmadi dan konsultan ortodonti Dr. drg. Ratna Sekundariadewi Rustamadji), yang berkembang menjadi MetriSnap, startup binaan UI Incubate. MetriSnap terpilih sebagai penerima pendanaan Program Hackathon UI Incubate Pathway 2025 (kategori PSF), dan sekarang sedang dalam proses integrasi menjadi modul AI baru di platform PRECIA.',
+        body: 'Modul ini berawal dari riset penelitian tim Fakultas Ilmu Komputer UI (Amanda Nurul Izzah, Kausar Meutuwah, Risa Lestari, dibimbing Muhammad Febrian Rachmadi dan konsultan ortodonti Dr. drg. Ratna Sekundariadewi Rustamadji), yang berkembang menjadi MetriSnap, startup binaan UI Incubate. MetriSnap terpilih sebagai penerima pendanaan Program Hackathon UI Incubate Pathway 2025 (kategori PSF), dan sekarang sedang dalam proses integrasi menjadi modul AI baru di platform PRECIA.',
       },
       {
         heading: 'Hasil uji coba',
@@ -47,7 +47,7 @@ const content: Record<'id' | 'en', { title: string; sections: { heading: string;
       },
       {
         heading: 'Origin: from research to MetriSnap to PRECIA',
-        body: 'This module started as undergraduate thesis research from a Universitas Indonesia Faculty of Computer Science team (Amanda Nurul Izzah, Kausar Meutuwah, Risa Lestari, advised by Muhammad Febrian Rachmadi with orthodontic consultant Dr. drg. Ratna Sekundariadewi Rustamadji), which grew into MetriSnap, a UI Incubate-backed startup. MetriSnap was selected as a funding recipient of the UI Incubate Pathway 2025 Hackathon Program (PSF category), and is now being integrated as a new AI module into the PRECIA platform.',
+        body: 'This module started as research from a Universitas Indonesia Faculty of Computer Science team (Amanda Nurul Izzah, Kausar Meutuwah, Risa Lestari, advised by Muhammad Febrian Rachmadi with orthodontic consultant Dr. drg. Ratna Sekundariadewi Rustamadji), which grew into MetriSnap, a UI Incubate-backed startup. MetriSnap was selected as a funding recipient of the UI Incubate Pathway 2025 Hackathon Program (PSF category), and is now being integrated as a new AI module into the PRECIA platform.',
       },
       {
         heading: 'Trial results',
