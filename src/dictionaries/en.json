@@ -10,7 +10,8 @@
   },
   "hero": {
     "badge": "Clinical AI platform",
-    "title": "Faster screening, decisions still made by the doctor",
+    "title_before": "Faster screening, decisions still made by the",
+    "title_accent": "doctor",
     "subtitle": "PRECIA runs clinical AI modules, from ECG to uroflowmetry, in one system. Hospitals don't need a new app every time a new module ships.",
     "cta_primary": "Schedule a demo",
     "cta_secondary": "See AI modules",

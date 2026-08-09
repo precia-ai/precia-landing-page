@@ -10,7 +10,8 @@
   },
   "hero": {
     "badge": "Platform AI klinis",
-    "title": "Skrining lebih cepat, keputusan tetap di tangan dokter",
+    "title_before": "Skrining lebih cepat, keputusan tetap di tangan",
+    "title_accent": "dokter",
     "subtitle": "PRECIA menjalankan modul AI klinis, dari ECG sampai uroflowmetry, dalam satu sistem. Rumah sakit tidak perlu memasang aplikasi baru setiap ada modul baru.",
     "cta_primary": "Jadwalkan demo",
     "cta_secondary": "Lihat modul AI",
