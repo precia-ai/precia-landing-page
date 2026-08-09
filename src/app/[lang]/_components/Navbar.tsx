@@ -34,7 +34,7 @@ export default function Navbar({ dict, currentLang }: { dict: Dictionary; curren
             />
           </Link>
 
-          <div className="hidden md:flex flex-1 justify-center items-center space-x-7">
+          <div className="hidden lg:flex flex-1 justify-center items-center space-x-7">
             {navLinks.map((link) => (
               <Link
                 key={link.key}
@@ -46,7 +46,7 @@ export default function Navbar({ dict, currentLang }: { dict: Dictionary; curren
             ))}
           </div>
 
-          <div className="hidden md:flex items-center space-x-5">
+          <div className="hidden lg:flex items-center space-x-5">
             <LanguageSwitcher currentLang={currentLang} />
             <a
               href="https://app-dev.precia.site"
@@ -62,7 +62,7 @@ export default function Navbar({ dict, currentLang }: { dict: Dictionary; curren
             </Link>
           </div>
 
-          <div className="md:hidden flex items-center pr-1">
+          <div className="lg:hidden flex items-center pr-1">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="relative w-9 h-9 flex items-center justify-center text-foreground focus:outline-none"
@@ -90,7 +90,7 @@ export default function Navbar({ dict, currentLang }: { dict: Dictionary; curren
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -12, scale: 0.98 }}
             transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
-            className="md:hidden mt-3 mx-auto max-w-4xl rounded-3xl border border-white/60 bg-white/85 backdrop-blur-2xl shadow-lg px-6 pt-5 pb-7 space-y-1"
+            className="lg:hidden mt-3 mx-auto max-w-4xl rounded-3xl border border-white/60 bg-white/85 backdrop-blur-2xl shadow-lg px-6 pt-5 pb-7 space-y-1"
           >
             {navLinks.map((link, i) => (
               <motion.div

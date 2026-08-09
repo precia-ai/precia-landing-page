@@ -1,0 +1,11 @@
+# PRECIA
+> Platform AI klinis untuk rumah sakit dan klinik. Menjalankan modul AI klinis (AI-ECG EF Screening, AI-BOO Multimodal uroflowmetry) dalam satu sistem, dengan dokter tetap sebagai pengambil keputusan akhir.
+
+## Halaman
+- [Beranda (Indonesia)](https://precia.site/id): Ringkasan platform, modul AI, cara kerja, dan kontak.
+- [Homepage (English)](https://precia.site/en): English version of the homepage.
+
+## Fakta kunci
+- Modul AI-ECG (EF Screening) dan AI-BOO Multimodal (uroflowmetry) tersedia; AI-Ortho dalam pengembangan.
+- Setiap mutasi data tercatat otomatis di audit trail untuk kepatuhan.
+- Kontak: hello@precia.site
