@@ -147,6 +147,10 @@
       {
         "question": "Which AI modules are available today?",
         "answer": "AI-ECG (EF Screening) for cardiology and AI-BOO Multimodal for urology are live on our platform. AI-Ortho is in development. New modules are added based on what partner hospitals and clinics need."
+      },
+      {
+        "question": "What's being developed next?",
+        "answer": "Two research directions are underway: screening for mitral valve disease (regurgitation/stenosis) from the same ECG images used by AI-ECG, and screening for Detrusor Underactivity from urology patients' clinical data. Both are still research/pilot stage — thesis-based models exist but haven't been wrapped into a production service yet. We're transparent about the stage because it matters for your clinical decisions."
       }
     ]
   },
