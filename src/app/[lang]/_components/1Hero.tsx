@@ -1,10 +1,12 @@
 "use client";
 
+import type { Dictionary } from "@/lib/dictionary";
+
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function Hero({ dict }: { dict: any }) {
+export default function Hero({ dict }: { dict: Dictionary }) {
   const stats = [
     { value: dict.hero.stat1_value, label: dict.hero.stat1_label },
     { value: dict.hero.stat2_value, label: dict.hero.stat2_label },

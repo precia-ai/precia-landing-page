@@ -1,6 +1,8 @@
 "use client";
 
-export default function Benefits({ dict }: { dict: any }) {
+import type { Dictionary } from "@/lib/dictionary";
+
+export default function Benefits({ dict }: { dict: Dictionary }) {
   return (
     <section id="kepatuhan" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a1b4e] text-white">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14">
@@ -11,7 +13,7 @@ export default function Benefits({ dict }: { dict: any }) {
           </h2>
 
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
-            {dict.platform.features.map((feature: any, i: number) => (
+            {dict.platform.features.map((feature, i: number) => (
               <div key={i}>
                 <div className="text-base font-semibold">{feature.title}</div>
                 <div className="mt-1.5 text-sm leading-relaxed text-white/60">{feature.description}</div>
@@ -21,7 +23,7 @@ export default function Benefits({ dict }: { dict: any }) {
         </div>
 
         <div className="flex flex-col justify-center gap-4">
-          {dict.platform.stats.map((stat: any, i: number) => (
+          {dict.platform.stats.map((stat, i: number) => (
             <div
               key={i}
               className={`flex items-baseline gap-5 ${

@@ -1,5 +1,7 @@
 "use client";
 
+import type { Dictionary } from "@/lib/dictionary";
+
 import { useActionState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { UserIcon, BuildingOfficeIcon, EnvelopeIcon, ChatBubbleBottomCenterTextIcon, PaperAirplaneIcon, CheckCircleIcon, ExclamationTriangleIcon } from "@heroicons/react/24/outline";
@@ -10,7 +12,7 @@ const initialState: ContactFormState = {
   message: "",
 };
 
-export default function ContactUs({ dict }: { dict: any }) {
+export default function ContactUs({ dict }: { dict: Dictionary }) {
   const [state, formAction, isPending] = useActionState(submitContactForm, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -51,7 +53,7 @@ export default function ContactUs({ dict }: { dict: any }) {
           </div>
 
           <div className="mt-7 grid sm:grid-cols-2 gap-4">
-            {dict.contact.contacts.map((person: any, i: number) => (
+            {dict.contact.contacts.map((person, i: number) => (
               <div key={i} className="rounded-lg border border-border p-4">
                 <div className="text-base font-semibold text-foreground">{person.name}</div>
                 <div className="mt-0.5 text-sm text-muted-foreground">{person.role}</div>

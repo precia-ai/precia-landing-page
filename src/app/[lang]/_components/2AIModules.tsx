@@ -1,8 +1,10 @@
 "use client";
 
+import type { Dictionary } from "@/lib/dictionary";
+
 import Image from "next/image";
 
-export default function AIModules({ dict }: { dict: any }) {
+export default function AIModules({ dict }: { dict: Dictionary }) {
   return (
     <>
       {/* Masalah yang kami selesaikan */}
@@ -16,7 +18,7 @@ export default function AIModules({ dict }: { dict: any }) {
           </h2>
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {dict.problems.items.map((item: any, i: number) => (
+            {dict.problems.items.map((item, i: number) => (
               <div key={i} className="rounded-xl border border-border bg-card p-6">
                 <div className="text-[11px] tracking-widest uppercase font-semibold text-amber-700">
                   {item.tag}
@@ -42,7 +44,7 @@ export default function AIModules({ dict }: { dict: any }) {
           </h2>
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {dict.how.steps.map((step: any, i: number) => (
+            {dict.how.steps.map((step, i: number) => (
               <div key={i} className="rounded-xl border border-border bg-card p-6">
                 <div className="w-9 h-9 rounded-md bg-primary text-primary-foreground flex items-center justify-center font-semibold">
                   {i + 1}
@@ -69,7 +71,7 @@ export default function AIModules({ dict }: { dict: any }) {
           </div>
 
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {dict.modules.items.map((mod: any, i: number) => {
+            {dict.modules.items.map((mod, i: number) => {
               const dotColor = ["bg-primary", "bg-brand-cyan", "bg-brand-turquoise", "bg-muted-foreground"][i % 4];
               const isRoadmap = mod.status === "roadmap";
               const statusLabel =

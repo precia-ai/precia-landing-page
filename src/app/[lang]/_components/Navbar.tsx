@@ -1,5 +1,7 @@
 "use client";
 
+import type { Dictionary } from "@/lib/dictionary";
+
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-const navLinks = [
+const navLinks: { href: string; key: keyof Dictionary["nav"] }[] = [
   { href: "#platform", key: "platform" },
   { href: "#modul", key: "modules" },
   { href: "#cara-kerja", key: "how_it_works" },
@@ -15,7 +17,7 @@ const navLinks = [
   { href: "#kontak", key: "contact" },
 ];
 
-export default function Navbar({ dict, currentLang }: { dict: any; currentLang: string }) {
+export default function Navbar({ dict, currentLang }: { dict: Dictionary; currentLang: string }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (

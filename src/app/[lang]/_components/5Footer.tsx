@@ -1,10 +1,12 @@
 "use client";
 
+import type { Dictionary } from "@/lib/dictionary";
+
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Footer({ dict }: { dict: any }) {
-  const productLinks = [
+export default function Footer({ dict }: { dict: Dictionary }) {
+  const productLinks: { href: string; key: keyof Dictionary["nav"] }[] = [
     { href: "#platform", key: "platform" },
     { href: "#modul", key: "modules" },
     { href: "#cara-kerja", key: "how_it_works" },
