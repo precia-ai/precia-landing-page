@@ -5,7 +5,7 @@ import type { Dictionary } from "@/lib/dictionary";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Footer({ dict }: { dict: Dictionary }) {
+export default function Footer({ dict, currentLang }: { dict: Dictionary; currentLang: string }) {
   const productLinks: { href: string; key: keyof Dictionary["nav"] }[] = [
     { href: "#platform", key: "platform" },
     { href: "#modul", key: "modules" },
@@ -65,8 +65,18 @@ export default function Footer({ dict }: { dict: Dictionary }) {
           </div>
         </div>
 
-        <div className="mt-9 pt-5 border-t border-border flex flex-col sm:flex-row justify-between gap-3 text-xs text-muted-foreground">
-          <div>{dict.footer.disclaimer}</div>
+        <div className="mt-9 pt-5 border-t border-border flex flex-col sm:flex-row justify-between gap-4 text-xs text-muted-foreground">
+          <div className="flex flex-col sm:flex-row gap-1.5 sm:gap-4">
+            <div>{dict.footer.disclaimer}</div>
+            <div className="flex gap-4">
+              <Link href={`/${currentLang}/privacy`} className="hover:text-primary transition-colors">
+                {currentLang === "id" ? "Kebijakan Privasi" : "Privacy Policy"}
+              </Link>
+              <Link href={`/${currentLang}/terms`} className="hover:text-primary transition-colors">
+                {currentLang === "id" ? "Syarat & Ketentuan" : "Terms of Service"}
+              </Link>
+            </div>
+          </div>
           <div>{dict.footer.copyright}</div>
         </div>
       </div>

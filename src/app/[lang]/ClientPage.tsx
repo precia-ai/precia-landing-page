@@ -18,7 +18,7 @@ export default function ClientPage({ dict, currentLang }: { dict: Dictionary, cu
         <Benefits dict={dict} />
         <ContactUs dict={dict} />
       </main>
-      <Footer dict={dict} />
+      <Footer dict={dict} currentLang={currentLang} />
     </div>
   );
 }
