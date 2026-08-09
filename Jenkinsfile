@@ -29,6 +29,11 @@ pipeline {
                     reuseNode true
                 }
             }
+            environment {
+                // prisma.config.ts resolves DATABASE_URL eagerly for `prisma generate`
+                // (triggered by postinstall), even though generate never opens a connection.
+                DATABASE_URL = 'postgresql://placeholder:placeholder@localhost:5432/placeholder'
+            }
             steps {
                 sh '''
                     npm ci
