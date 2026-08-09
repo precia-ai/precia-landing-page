@@ -7,8 +7,7 @@ export default function Benefits({ dict }: { dict: Dictionary }) {
     <section id="kepatuhan" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a1b4e] text-white">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14">
         <div>
-          <div className="text-xs tracking-widest uppercase text-[#7fb6ff] font-semibold">{dict.platform.eyebrow}</div>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight text-white text-balance">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white text-balance">
             {dict.platform.title}
           </h2>
 

@@ -50,7 +50,7 @@ export default async function OpengraphImage({
             maxWidth: 980,
           }}
         >
-          {dict.seo.title.replace('PRECIA — ', '')}
+          {dict.seo.title.replace('PRECIA - ', '')}
         </div>
         <div
           style={{
