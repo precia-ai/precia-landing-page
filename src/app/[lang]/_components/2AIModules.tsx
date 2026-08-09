@@ -3,79 +3,34 @@
 import type { Dictionary } from "@/lib/dictionary";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 function HowItWorks({ dict }: { dict: Dictionary }) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    let ctx: { revert: () => void } | undefined;
-    let cancelled = false;
-
-    (async () => {
-      const gsapModule = await import("gsap");
-      const { ScrollTrigger } = await import("gsap/ScrollTrigger");
-      if (cancelled) return;
-
-      const gsap = gsapModule.default;
-      gsap.registerPlugin(ScrollTrigger);
-
-      const container = containerRef.current;
-      const track = trackRef.current;
-      if (!container || !track) return;
-
-      ctx = gsap.context(() => {
-        const scrollAmount = track.scrollWidth - container.offsetWidth;
-        if (scrollAmount <= 0) return;
-
-        gsap.to(track, {
-          x: -scrollAmount,
-          ease: "none",
-          scrollTrigger: {
-            trigger: container,
-            start: "top top",
-            end: () => `+=${scrollAmount}`,
-            scrub: 1,
-            pin: true,
-            invalidateOnRefresh: true,
-          },
-        });
-      }, container);
-    })();
-
-    return () => {
-      cancelled = true;
-      ctx?.revert();
-    };
-  }, []);
-
   return (
     <section
       id="cara-kerja"
-      ref={containerRef}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-muted border-y border-border overflow-hidden"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-muted border-y border-border"
     >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground text-balance">
           {dict.how.title}
         </h2>
-      </div>
 
-      <div ref={trackRef} className="mt-12 flex gap-6 w-max pl-4 sm:pl-6 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] pr-10">
-        {dict.how.steps.map((step, i: number) => (
-          <div
-            key={i}
-            className="w-[78vw] sm:w-[380px] flex-none rounded-[1.75rem] bg-card border border-border p-8 shadow-sm"
-          >
-            <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold shadow-accent">
-              {i + 1}
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {dict.how.steps.map((step, i: number) => (
+            <div
+              key={i}
+              className="rounded-[1.75rem] bg-card border border-border p-8 shadow-sm"
+            >
+              <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold shadow-accent">
+                {i + 1}
+              </div>
+              <div className="mt-6 text-xl font-semibold text-foreground">{step.title}</div>
+              <div className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.description}</div>
             </div>
-            <div className="mt-6 text-xl font-semibold text-foreground">{step.title}</div>
-            <div className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.description}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
