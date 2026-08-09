@@ -20,7 +20,7 @@
     "subtitle": "PRECIA runs clinical AI modules, from ECG to uroflowmetry, in one system. Hospitals don't need a new app every time a new module ships.",
     "cta_primary": "Schedule a demo",
     "cta_secondary": "See AI modules",
-    "stat1_value": "30 seconds",
+    "stat1_value": "<2 seconds",
     "stat1_label": "AI screening result, standard request",
     "stat2_value": "99.9%",
     "stat2_label": "Uptime during operating hours",
@@ -41,7 +41,7 @@
         "tag": "Problem",
         "title": "Long examination queues",
         "description": "Dozens of readings a day, quality swings when doctors get tired.",
-        "solution": "Initial screening comes out in 30 seconds, consistent every time."
+        "solution": "Initial screening comes out in under 2 seconds on average, consistent every time."
       },
       {
         "tag": "Problem",
@@ -68,7 +68,7 @@
     "title": "Four steps, no change to clinic habits",
     "steps": [
       { "title": "Data comes in", "description": "ECG recordings or uroflowmetry results are uploaded to the patient's clinical transaction." },
-      { "title": "AI screens it", "description": "The relevant AI module runs and returns a result within 30 seconds." },
+      { "title": "AI screens it", "description": "The relevant AI module runs and returns a result in under 2 seconds on average." },
       { "title": "Doctor reviews", "description": "Confidence score and result explanation are shown. The doctor decides." },
       { "title": "Everything is logged", "description": "AI and user activity go into the audit trail for compliance." }
     ]
@@ -138,7 +138,7 @@
       },
       {
         "question": "How long does an AI screening result take?",
-        "answer": "For a standard request, AI-ECG and AI-BOO results typically come back within seconds to minutes, depending on server load at the time."
+        "answer": "For a standard request, AI-ECG and AI-BOO results typically come back in under 2 seconds on average (based on internal testing, 20 runs per module, 20/20 successful). It can take longer under heavy server load."
       },
       {
         "question": "Does PRECIA have BPOM/Ministry of Health regulatory clearance?",
@@ -165,7 +165,7 @@
     ],
     "stats": [
       { "value": "99.9%", "label": "Platform uptime during operating hours" },
-      { "value": "30 sec", "label": "AI result for a standard request" },
+      { "value": "<2 sec", "label": "AI result for a standard request" },
       { "value": "40%", "label": "Cheaper than building a standalone AI application" },
       { "value": "50%", "label": "Clinician admin time saved, no app switching" }
     ]

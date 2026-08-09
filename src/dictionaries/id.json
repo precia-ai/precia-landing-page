@@ -20,7 +20,7 @@
     "subtitle": "PRECIA menjalankan modul AI klinis, dari ECG sampai uroflowmetry, dalam satu sistem. Rumah sakit tidak perlu memasang aplikasi baru setiap ada modul baru.",
     "cta_primary": "Jadwalkan demo",
     "cta_secondary": "Lihat modul AI",
-    "stat1_value": "30 detik",
+    "stat1_value": "<2 detik",
     "stat1_label": "Hasil skrining AI, permintaan standar",
     "stat2_value": "99,9%",
     "stat2_label": "Uptime pada jam operasional",
@@ -41,7 +41,7 @@
         "tag": "Masalah",
         "title": "Antrean pemeriksaan panjang",
         "description": "Puluhan bacaan per hari, kualitas naik turun saat dokter kelelahan.",
-        "solution": "Skrining awal keluar dalam 30 detik, konsisten tiap pemeriksaan."
+        "solution": "Skrining awal keluar rata-rata di bawah 2 detik, konsisten tiap pemeriksaan."
       },
       {
         "tag": "Masalah",
@@ -68,7 +68,7 @@
     "title": "Empat langkah, tanpa mengubah kebiasaan poli",
     "steps": [
       { "title": "Data masuk", "description": "Rekaman ECG atau hasil uroflowmetry diunggah ke transaksi klinis pasien." },
-      { "title": "AI menyaring", "description": "Modul AI yang relevan berjalan dan mengembalikan hasil dalam 30 detik." },
+      { "title": "AI menyaring", "description": "Modul AI yang relevan berjalan dan mengembalikan hasil rata-rata di bawah 2 detik." },
       { "title": "Dokter meninjau", "description": "Confidence score dan penjelasan hasil ditampilkan. Dokter yang memutuskan." },
       { "title": "Semua tercatat", "description": "Aktivitas AI dan pengguna masuk ke audit trail untuk kepatuhan." }
     ]
@@ -138,7 +138,7 @@
       },
       {
         "question": "Berapa lama hasil skrining AI keluar?",
-        "answer": "Untuk permintaan standar, hasil AI-ECG dan AI-BOO biasanya keluar dalam hitungan detik hingga menit, tergantung beban server saat itu."
+        "answer": "Untuk permintaan standar, hasil AI-ECG dan AI-BOO biasanya keluar rata-rata di bawah 2 detik (berdasarkan pengujian internal 20 kali percobaan per modul, 20/20 sukses). Bisa lebih lama kalau server sedang beban tinggi."
       },
       {
         "question": "Modul AI apa saja yang sudah tersedia?",
@@ -161,7 +161,7 @@
     ],
     "stats": [
       { "value": "99,9%", "label": "Uptime platform selama jam operasional" },
-      { "value": "30 dtk", "label": "Hasil AI keluar untuk permintaan standar" },
+      { "value": "<2 dtk", "label": "Hasil AI keluar untuk permintaan standar" },
       { "value": "40%", "label": "Lebih hemat dibanding membangun aplikasi AI berdiri sendiri" },
       { "value": "50%", "label": "Waktu administratif klinisi yang dihemat, tanpa pindah aplikasi" }
     ]
