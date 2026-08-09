@@ -4,6 +4,7 @@ import type { Dictionary } from "@/lib/dictionary";
 import Navbar from "./_components/Navbar";
 import Hero from "./_components/1Hero";
 import AIModules from "./_components/2AIModules";
+import Simrs from "./_components/3bSimrs";
 import Benefits from "./_components/3Benefits";
 import ContactUs from "./_components/4ContactUs";
 import Footer from "./_components/5Footer";
@@ -16,6 +17,7 @@ export default function ClientPage({ dict, currentLang }: { dict: Dictionary, cu
       <main id="main-content">
         <Hero dict={dict} />
         <AIModules dict={dict} currentLang={currentLang} />
+        <Simrs dict={dict} />
         <Benefits dict={dict} />
         <FAQ dict={dict} />
         <ContactUs dict={dict} />
