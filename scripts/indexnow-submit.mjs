@@ -10,6 +10,8 @@ const urlList = [
   `https://${host}/en/modul/ai-ecg`,
   `https://${host}/id/modul/ai-boo`,
   `https://${host}/en/modul/ai-boo`,
+  `https://${host}/id/modul/ai-ortho`,
+  `https://${host}/en/modul/ai-ortho`,
   `https://${host}/id/privacy`,
   `https://${host}/en/privacy`,
   `https://${host}/id/terms`,

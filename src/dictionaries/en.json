@@ -100,8 +100,8 @@
         "category": "Orthodontics",
         "name": "AI-Ortho",
         "status": "research",
-        "description": "Analyzes frontal and side facial photos to assess symmetry and proportion.",
-        "roadmap": "Development direction is set, we're open to discussing pilot trials."
+        "description": "Analyzes frontal and side facial photos to assess symmetry and proportion, built on MetriSnap, a UI Incubate-backed startup that speeds up orthodontic photogrammetry measurement.",
+        "roadmap": "The MetriSnap prototype is already live, currently being integrated into the PRECIA platform."
       },
       {
         "category": "Next specialty",

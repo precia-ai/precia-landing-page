@@ -10,6 +10,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const moduleSlugs: Record<string, string> = {
   "AI-ECG (EF Screening)": "ai-ecg",
   "AI-BOO Multimodal": "ai-boo",
+  "AI-Ortho": "ai-ortho",
 };
 
 function HowItWorks({ dict }: { dict: Dictionary }) {

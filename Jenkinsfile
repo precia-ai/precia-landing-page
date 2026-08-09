@@ -119,7 +119,7 @@ pipeline {
                     sleep 15
                     curl -s -o /dev/null -w "IndexNow submit: HTTP %{http_code}\\n" -X POST https://api.indexnow.org/indexnow \
                         -H "Content-Type: application/json; charset=utf-8" \
-                        -d '{"host":"precia.site","key":"749ba0fbb07d6a0051e445212423f5dd","keyLocation":"https://precia.site/749ba0fbb07d6a0051e445212423f5dd.txt","urlList":["https://precia.site/id","https://precia.site/en","https://precia.site/id/modul/ai-ecg","https://precia.site/en/modul/ai-ecg","https://precia.site/id/modul/ai-boo","https://precia.site/en/modul/ai-boo","https://precia.site/id/privacy","https://precia.site/en/privacy","https://precia.site/id/terms","https://precia.site/en/terms"]}' || true
+                        -d '{"host":"precia.site","key":"749ba0fbb07d6a0051e445212423f5dd","keyLocation":"https://precia.site/749ba0fbb07d6a0051e445212423f5dd.txt","urlList":["https://precia.site/id","https://precia.site/en","https://precia.site/id/modul/ai-ecg","https://precia.site/en/modul/ai-ecg","https://precia.site/id/modul/ai-boo","https://precia.site/en/modul/ai-boo","https://precia.site/id/modul/ai-ortho","https://precia.site/en/modul/ai-ortho","https://precia.site/id/privacy","https://precia.site/en/privacy","https://precia.site/id/terms","https://precia.site/en/terms"]}' || true
                 '''
             }
         }

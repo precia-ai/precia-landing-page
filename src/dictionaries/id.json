@@ -100,8 +100,8 @@
         "category": "Ortodonti",
         "name": "AI-Ortho",
         "status": "research",
-        "description": "Analisis foto wajah depan dan samping untuk menilai simetri serta proporsi.",
-        "roadmap": "Arah pengembangan sudah jelas, kami buka diskusi untuk uji coba bersama."
+        "description": "Analisis foto wajah depan dan samping untuk menilai simetri serta proporsi, berbasis MetriSnap, startup binaan UI Incubate yang mempercepat pengukuran fotogrametri ortodonti.",
+        "roadmap": "Prototipe MetriSnap sudah live, sedang proses integrasi ke platform PRECIA."
       },
       {
         "category": "Spesialisasi berikutnya",
@@ -139,10 +139,6 @@
       {
         "question": "Berapa lama hasil skrining AI keluar?",
         "answer": "Untuk permintaan standar, hasil AI-ECG dan AI-BOO biasanya keluar dalam hitungan detik hingga menit, tergantung beban server saat itu."
-      },
-      {
-        "question": "Apakah PRECIA sudah punya izin edar atau registrasi resmi dari BPOM/Kemenkes?",
-        "answer": "Saat ini belum. Kami transparan soal ini karena penting untuk keputusan klinis Anda. Modul AI kami berstatus pilot/uji coba dan sedang berjalan bersama institusi mitra. Hubungi tim kami di contact@precia.site untuk status terkini."
       },
       {
         "question": "Modul AI apa saja yang sudah tersedia?",

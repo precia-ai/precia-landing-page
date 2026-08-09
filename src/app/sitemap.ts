@@ -3,7 +3,7 @@ import { siteUrl } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = ['id', 'en'] as const;
-  const modules = ['ai-ecg', 'ai-boo'] as const;
+  const modules = ['ai-ecg', 'ai-boo', 'ai-ortho'] as const;
   const lastModified = new Date();
 
   const homeEntries: MetadataRoute.Sitemap = locales.map((lang) => ({
