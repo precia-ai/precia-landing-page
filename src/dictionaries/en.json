@@ -94,7 +94,14 @@
         "name": "AI-BOO Multimodal",
         "status": "available",
         "description": "Screens for Bladder Outlet Obstruction from a uroflowmetry waveform and patient clinical data.",
-        "roadmap": "Other AI-BOO variants and Detrusor Underactivity screening."
+        "roadmap": "Other AI-BOO variants are in further development."
+      },
+      {
+        "category": "Urology",
+        "name": "AI-DU (Detrusor Underactivity)",
+        "status": "available",
+        "description": "Screens for Detrusor Underactivity from urology patients' clinical data, running on the same platform as AI-BOO.",
+        "roadmap": "Fully developed and running in PRECIA production."
       },
       {
         "category": "Orthodontics",
@@ -118,7 +125,13 @@
     "ecg_alt": "AI-ECG EF Screening result in PRECIA",
     "ecg_caption": "AI-ECG: confidence score, classification, and a reading guide. Clinical confirmation is still required.",
     "uroflow_alt": "AI-BOO Multimodal result with uroflowmetry waveform in PRECIA",
-    "uroflow_caption": "AI-BOO Multimodal: the part of the uroflowmetry waveform that most influenced the prediction is shown too."
+    "uroflow_caption": "AI-BOO Multimodal: the part of the uroflowmetry waveform that most influenced the prediction is shown too.",
+    "analytics_eyebrow": "Operational analytics",
+    "analytics_title": "Track AI adoption and performance in real time",
+    "dashboard_alt": "PRECIA operational dashboard showing transaction volume, AI inferences, and success rate",
+    "dashboard_caption": "Dashboard: transaction volume, daily throughput, and case status in one screen.",
+    "adoption_alt": "PRECIA adoption analytics page showing active unit percentage and per-module AI utilization",
+    "adoption_caption": "Adoption analytics: which clinical units are actively using AI, and which modules see the most use."
   },
   "faq": {
     "eyebrow": "Frequently asked",
@@ -126,7 +139,7 @@
     "items": [
       {
         "question": "What is PRECIA?",
-        "answer": "PRECIA is a clinical AI platform for hospitals and clinics. We run several AI screening modules (currently AI-ECG and AI-BOO Multimodal) in one system, with the doctor as the final decision-maker and every action logged to the audit trail."
+        "answer": "PRECIA is a clinical AI platform for hospitals and clinics. We run several AI screening modules (currently AI-ECG, AI-BOO Multimodal, and AI-DU) in one system, with the doctor as the final decision-maker and every action logged to the audit trail."
       },
       {
         "question": "How does PRECIA's AI-ECG work?",
@@ -146,11 +159,11 @@
       },
       {
         "question": "Which AI modules are available today?",
-        "answer": "AI-ECG (EF Screening) for cardiology and AI-BOO Multimodal for urology are live on our platform. AI-Ortho is in development. New modules are added based on what partner hospitals and clinics need."
+        "answer": "AI-ECG (EF Screening) for cardiology, AI-BOO Multimodal and AI-DU (Detrusor Underactivity) for urology are live on our platform. AI-Ortho is in development. New modules are added based on what partner hospitals and clinics need."
       },
       {
         "question": "What's being developed next?",
-        "answer": "Two research directions are underway: screening for mitral valve disease (regurgitation/stenosis) from the same ECG images used by AI-ECG, and screening for Detrusor Underactivity from urology patients' clinical data. Both are still research/pilot stage — research models exist but haven't been wrapped into a production service yet. We're transparent about the stage because it matters for your clinical decisions."
+        "answer": "One research direction is underway: screening for mitral valve disease (regurgitation/stenosis) from the same ECG images used by AI-ECG. Still research/pilot stage — a research model exists but hasn't been wrapped into a production service yet. We're transparent about the stage because it matters for your clinical decisions."
       },
       {
         "question": "Can PRECIA connect to the SIMRS my hospital already uses?",

@@ -245,6 +245,50 @@ export default function AIModules({ dict, currentLang }: { dict: Dictionary; cur
           <ShowcaseStack dict={dict} />
         </div>
       </section>
+
+      {/* Analitik operasional */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-muted border-y border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-xs tracking-widest uppercase text-primary font-semibold">{dict.showcase.analytics_eyebrow}</div>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground text-balance">
+            {dict.showcase.analytics_title}
+          </h2>
+
+          <div className="mt-9 grid md:grid-cols-2 gap-6">
+            <div className="group">
+              <div className="rounded-[1.75rem] p-1.5 bg-white/60 backdrop-blur-md border border-white/70 shadow-lg hover:shadow-accent-lg hover:-translate-y-0.5 transition-all duration-300">
+                <div className="rounded-[calc(1.75rem-0.375rem)] border border-border overflow-hidden bg-card">
+                  <Image
+                    src="/landingpage/ui-analytics-dashboard.png"
+                    alt={dict.showcase.dashboard_alt}
+                    width={2304}
+                    height={1297}
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                </div>
+              </div>
+              <div className="mt-3 text-sm leading-relaxed text-muted-foreground">{dict.showcase.dashboard_caption}</div>
+            </div>
+
+            <div className="group">
+              <div className="rounded-[1.75rem] p-1.5 bg-white/60 backdrop-blur-md border border-white/70 shadow-lg hover:shadow-accent-lg hover:-translate-y-0.5 transition-all duration-300">
+                <div className="rounded-[calc(1.75rem-0.375rem)] border border-border overflow-hidden bg-card">
+                  <Image
+                    src="/landingpage/ui-analytics-adoption.png"
+                    alt={dict.showcase.adoption_alt}
+                    width={2304}
+                    height={1297}
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                </div>
+              </div>
+              <div className="mt-3 text-sm leading-relaxed text-muted-foreground">{dict.showcase.adoption_caption}</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

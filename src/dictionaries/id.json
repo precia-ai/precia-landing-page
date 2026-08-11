@@ -94,7 +94,14 @@
         "name": "AI-BOO Multimodal",
         "status": "available",
         "description": "Skrining Bladder Outlet Obstruction dari waveform uroflowmetry dan data klinis pasien.",
-        "roadmap": "Varian AI-BOO lain dan skrining Detrusor Underactivity."
+        "roadmap": "Varian AI-BOO lain sedang dikembangkan lebih lanjut."
+      },
+      {
+        "category": "Urologi",
+        "name": "AI-DU (Detrusor Underactivity)",
+        "status": "available",
+        "description": "Skrining Detrusor Underactivity dari data klinis pasien urologi, berjalan di platform yang sama dengan AI-BOO.",
+        "roadmap": "Sudah selesai dikembangkan dan berjalan di produksi PRECIA."
       },
       {
         "category": "Ortodonti",
@@ -118,7 +125,13 @@
     "ecg_alt": "Hasil AI-ECG EF Screening di PRECIA",
     "ecg_caption": "AI-ECG: confidence score, klasifikasi, dan panduan membaca hasil. Konfirmasi klinis tetap diperlukan.",
     "uroflow_alt": "Hasil AI-BOO Multimodal dengan waveform uroflowmetry di PRECIA",
-    "uroflow_caption": "AI-BOO Multimodal: bagian waveform uroflowmetry yang paling memengaruhi prediksi ikut ditampilkan."
+    "uroflow_caption": "AI-BOO Multimodal: bagian waveform uroflowmetry yang paling memengaruhi prediksi ikut ditampilkan.",
+    "analytics_eyebrow": "Analitik operasional",
+    "analytics_title": "Pantau adopsi dan performa AI secara real-time",
+    "dashboard_alt": "Dashboard operasional PRECIA menampilkan volume transaksi, inferensi AI, dan success rate",
+    "dashboard_caption": "Dashboard: volume transaksi, throughput harian, dan status tiap kasus dalam satu layar.",
+    "adoption_alt": "Halaman analitik adopsi PRECIA menampilkan persentase unit aktif dan utilisasi tiap modul AI",
+    "adoption_caption": "Analitik adopsi: unit klinis mana yang aktif pakai AI, dan modul mana yang paling banyak dipakai."
   },
   "faq": {
     "eyebrow": "Pertanyaan umum",
@@ -126,7 +139,7 @@
     "items": [
       {
         "question": "Apa itu PRECIA?",
-        "answer": "PRECIA adalah platform AI klinis untuk rumah sakit dan klinik. Kami menjalankan beberapa modul AI skrining (saat ini AI-ECG dan AI-BOO Multimodal) dalam satu sistem, dengan dokter tetap sebagai pengambil keputusan akhir dan setiap aktivitas tercatat di audit trail."
+        "answer": "PRECIA adalah platform AI klinis untuk rumah sakit dan klinik. Kami menjalankan beberapa modul AI skrining (saat ini AI-ECG, AI-BOO Multimodal, dan AI-DU) dalam satu sistem, dengan dokter tetap sebagai pengambil keputusan akhir dan setiap aktivitas tercatat di audit trail."
       },
       {
         "question": "Bagaimana AI-ECG PRECIA bekerja?",
@@ -142,11 +155,11 @@
       },
       {
         "question": "Modul AI apa saja yang sudah tersedia?",
-        "answer": "AI-ECG (EF Screening) untuk kardiologi dan AI-BOO Multimodal untuk urologi sudah berjalan di platform kami. AI-Ortho sedang dalam pengembangan. Modul baru ditambahkan sesuai kebutuhan rumah sakit dan klinik mitra."
+        "answer": "AI-ECG (EF Screening) untuk kardiologi, AI-BOO Multimodal dan AI-DU (Detrusor Underactivity) untuk urologi sudah berjalan di platform kami. AI-Ortho sedang dalam pengembangan. Modul baru ditambahkan sesuai kebutuhan rumah sakit dan klinik mitra."
       },
       {
         "question": "Modul apa yang sedang dikembangkan setelah ini?",
-        "answer": "Dua arah riset sedang berjalan: skrining kelainan katup mitral (regurgitasi/stenosis) dari citra ECG yang sama dengan AI-ECG, dan skrining Detrusor Underactivity dari data klinis pasien urologi. Keduanya masih berstatus riset/pilot, model hasil riset penelitian sudah ada tapi belum dibungkus jadi layanan produksi. Kami transparan soal tahapnya karena ini menyangkut keputusan klinis Anda."
+        "answer": "Satu arah riset sedang berjalan: skrining kelainan katup mitral (regurgitasi/stenosis) dari citra ECG yang sama dengan AI-ECG. Masih berstatus riset/pilot, model hasil riset penelitian sudah ada tapi belum dibungkus jadi layanan produksi. Kami transparan soal tahapnya karena ini menyangkut keputusan klinis Anda."
       },
       {
         "question": "Apakah PRECIA bisa terhubung ke SIMRS yang sudah dipakai rumah sakit saya?",
