@@ -2,10 +2,10 @@
 
 import type { Dictionary } from "@/lib/dictionary";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import ZoomableImage from "./ZoomableImage";
 
 const moduleSlugs: Record<string, string> = {
   "AI-ECG (EF Screening)": "ai-ecg",
@@ -67,7 +67,7 @@ function ShowcaseStack({ dict }: { dict: Dictionary }) {
       <motion.div style={{ y: y1 }} className="group md:relative md:z-10">
         <div className="rounded-[1.75rem] p-1.5 bg-white/60 backdrop-blur-md border border-white/70 shadow-lg hover:shadow-accent-lg hover:-translate-y-0.5 transition-all duration-300">
           <div className="rounded-[calc(1.75rem-0.375rem)] border border-border overflow-hidden bg-card">
-            <Image
+            <ZoomableImage
               src="/landingpage/ui-result-ecg.png"
               alt={dict.showcase.ecg_alt}
               width={1300}
@@ -83,7 +83,7 @@ function ShowcaseStack({ dict }: { dict: Dictionary }) {
       <motion.div style={{ y: y2 }} className="group md:-ml-10 md:mt-16 md:relative md:z-20">
         <div className="rounded-[1.75rem] p-1.5 bg-white/60 backdrop-blur-md border border-white/70 shadow-lg hover:shadow-accent-lg hover:-translate-y-0.5 transition-all duration-300">
           <div className="rounded-[calc(1.75rem-0.375rem)] border border-border overflow-hidden bg-card">
-            <Image
+            <ZoomableImage
               src="/landingpage/ui-result-uroflow.png"
               alt={dict.showcase.uroflow_alt}
               width={1320}
@@ -258,7 +258,7 @@ export default function AIModules({ dict, currentLang }: { dict: Dictionary; cur
             <div className="group">
               <div className="rounded-[1.75rem] p-1.5 bg-white/60 backdrop-blur-md border border-white/70 shadow-lg hover:shadow-accent-lg hover:-translate-y-0.5 transition-all duration-300">
                 <div className="rounded-[calc(1.75rem-0.375rem)] border border-border overflow-hidden bg-card">
-                  <Image
+                  <ZoomableImage
                     src="/landingpage/ui-analytics-dashboard.png"
                     alt={dict.showcase.dashboard_alt}
                     width={2304}
@@ -274,7 +274,7 @@ export default function AIModules({ dict, currentLang }: { dict: Dictionary; cur
             <div className="group">
               <div className="rounded-[1.75rem] p-1.5 bg-white/60 backdrop-blur-md border border-white/70 shadow-lg hover:shadow-accent-lg hover:-translate-y-0.5 transition-all duration-300">
                 <div className="rounded-[calc(1.75rem-0.375rem)] border border-border overflow-hidden bg-card">
-                  <Image
+                  <ZoomableImage
                     src="/landingpage/ui-analytics-adoption.png"
                     alt={dict.showcase.adoption_alt}
                     width={2304}
