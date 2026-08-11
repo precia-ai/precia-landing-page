@@ -5,6 +5,7 @@ import type { Dictionary } from "@/lib/dictionary";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import ZoomableImage from "./ZoomableImage";
 
 const partnerLogos = [
   { src: "/landingpage/partner-fasilkom.webp", alt: "Fakultas Ilmu Komputer Universitas Indonesia", href: "https://cs.ui.ac.id" },
@@ -72,22 +73,16 @@ export default function Hero({ dict }: { dict: Dictionary }) {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="rounded-[2rem] p-2 bg-white/60 backdrop-blur-md border border-white/70 shadow-lg"
           >
-            <div className="rounded-[calc(2rem-0.5rem)] overflow-hidden border border-border shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)] bg-card">
-              <div className="flex items-center gap-2.5 bg-[#0a1b4e] text-white px-4 py-2.5 text-xs tracking-wider">
-                <span className="w-2 h-2 rounded-full bg-[#3dc2c4]" />
-                {dict.hero.dashboard_caption}
-              </div>
-              <Image
-                src="/landingpage/app-dashboard.png"
-                alt={dict.hero.dashboard_caption}
-                width={1641}
-                height={994}
-                className="w-full h-auto block"
-                priority
-              />
-            </div>
+            <ZoomableImage
+              src="/landingpage/ui-dashboard-macbook-v2.png"
+              alt={dict.hero.dashboard_caption}
+              width={2762}
+              height={1586}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="w-full h-auto block drop-shadow-2xl"
+              priority
+            />
           </motion.div>
         </div>
       </section>

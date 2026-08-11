@@ -12,6 +12,7 @@ export default function ZoomableImage({
   height,
   sizes,
   className,
+  priority,
 }: {
   src: string;
   alt: string;
@@ -19,6 +20,7 @@ export default function ZoomableImage({
   height: number;
   sizes?: string;
   className?: string;
+  priority?: boolean;
 }) {
   const [open, setOpen] = useState(false);
 
@@ -50,6 +52,7 @@ export default function ZoomableImage({
           height={height}
           sizes={sizes}
           className={className}
+          priority={priority}
         />
       </button>
 
