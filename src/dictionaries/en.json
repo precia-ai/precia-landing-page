@@ -3,6 +3,12 @@
     "title": "PRECIA - Clinical AI Platform for Hospitals and Clinics",
     "description": "PRECIA runs clinical AI modules (AI-ECG, AI-BOO uroflowmetry) in one platform. Faster screening, the doctor still decides."
   },
+  "video": {
+    "eyebrow": "See it in action",
+    "title": "PRECIA showcase",
+    "subtitle": "Watch the PRECIA platform workflow end to end, from upload to AI result.",
+    "iframe_title": "PRECIA showcase video"
+  },
   "nav": {
     "platform": "Platform",
     "modules": "AI Modules",

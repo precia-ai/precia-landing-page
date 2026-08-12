@@ -3,6 +3,12 @@
     "title": "PRECIA - Platform AI Klinis untuk Rumah Sakit dan Klinik",
     "description": "PRECIA menjalankan modul AI klinis (AI-ECG, AI-BOO uroflowmetry) dalam satu platform. Skrining lebih cepat, dokter tetap memutuskan."
   },
+  "video": {
+    "eyebrow": "Lihat langsung",
+    "title": "PRECIA showcase",
+    "subtitle": "Tonton alur kerja platform PRECIA dari awal sampai hasil AI keluar.",
+    "iframe_title": "Video showcase PRECIA"
+  },
   "nav": {
     "platform": "Platform",
     "modules": "Modul AI",
