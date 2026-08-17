@@ -50,6 +50,14 @@ export default function Footer({ dict, currentLang }: { dict: Dictionary; curren
               <Link href="#kontak" className="hover:text-primary transition-colors">{dict.nav.contact}</Link>
               <Link href="#kontak" className="hover:text-primary transition-colors">{dict.nav.cta}</Link>
               <a href="https://app-dev.precia.site" className="hover:text-primary transition-colors">{dict.footer.company_login}</a>
+              {process.env.NEXT_PUBLIC_DOCS_URL && (
+                <a
+                  href={`${process.env.NEXT_PUBLIC_DOCS_URL}/${currentLang}`}
+                  className="hover:text-primary transition-colors"
+                >
+                  {dict.footer.company_docs}
+                </a>
+              )}
             </div>
           </div>
 
