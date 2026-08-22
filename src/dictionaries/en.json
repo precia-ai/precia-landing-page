@@ -182,9 +182,24 @@
     "title": "Proven to connect with the SIMRS you already use",
     "subtitle": "PRECIA doesn't replace your SIMRS. We've tested the integration path end-to-end: patient data flows into PRECIA automatically, AI results flow back to your SIMRS, no double data entry.",
     "items": [
-      { "name": "SIMRS Khanza", "note": "Integrated via an on-premise bridge on the hospital side." },
-      { "name": "MEDICCA", "note": "Automatic transaction sync and AI result callback." },
-      { "name": "Open Hospital", "note": "Push new cases and two-way AI result callback." }
+      {
+        "key": "khanza",
+        "name": "SIMRS Khanza",
+        "note": "Integrated via an on-premise bridge on the hospital side.",
+        "logo": { "file": "khanza.jpg", "kind": "badge" }
+      },
+      {
+        "key": "medicca",
+        "name": "MEDICCA",
+        "note": "Automatic transaction sync and AI result callback.",
+        "logo": null
+      },
+      {
+        "key": "openhospital",
+        "name": "Open Hospital",
+        "note": "Push new cases and two-way AI result callback.",
+        "logo": { "file": "openhospital.png", "kind": "icon" }
+      }
     ],
     "note": "The integration path has been tested end-to-end in our test environment. Using a different SIMRS? Talk to our team about your integration needs."
   },

@@ -178,9 +178,24 @@
     "title": "Terbukti terhubung dengan SIMRS yang sudah Anda pakai",
     "subtitle": "PRECIA bukan pengganti SIMRS Anda. Kami sudah menguji jalur integrasi end-to-end dengan sistem berikut: data pasien masuk otomatis ke PRECIA, hasil AI kembali ke SIMRS Anda, tanpa entri data ganda.",
     "items": [
-      { "name": "SIMRS Khanza", "note": "Terintegrasi lewat bridge on-premise di sisi rumah sakit." },
-      { "name": "MEDICCA", "note": "Sinkronisasi transaksi dan callback hasil AI otomatis." },
-      { "name": "Open Hospital", "note": "Push kasus baru dan callback hasil AI dua arah." }
+      {
+        "key": "khanza",
+        "name": "SIMRS Khanza",
+        "note": "Terintegrasi lewat bridge on-premise di sisi rumah sakit.",
+        "logo": { "file": "khanza.jpg", "kind": "badge" }
+      },
+      {
+        "key": "medicca",
+        "name": "MEDICCA",
+        "note": "Sinkronisasi transaksi dan callback hasil AI otomatis.",
+        "logo": null
+      },
+      {
+        "key": "openhospital",
+        "name": "Open Hospital",
+        "note": "Push kasus baru dan callback hasil AI dua arah.",
+        "logo": { "file": "openhospital.png", "kind": "icon" }
+      }
     ],
     "note": "Jalur integrasi sudah diuji end-to-end di lingkungan pengujian kami. Pakai SIMRS lain? Diskusikan kebutuhan integrasi Anda dengan tim kami."
   },
