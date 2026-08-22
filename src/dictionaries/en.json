@@ -173,35 +173,65 @@
       },
       {
         "question": "Can PRECIA connect to the SIMRS my hospital already uses?",
-        "answer": "We've tested the integration path end-to-end with SIMRS Khanza, MEDICCA, and Open Hospital in our test environment. PRECIA doesn't replace your SIMRS, it complements it: patient data flows in automatically, AI results flow back to the system you already use. Using a different SIMRS? Talk to our team about your needs."
+        "answer": "We've tested the integration path end-to-end with SIMRS Khanza, MEDICCA, and Open Hospital in our test environment. Connectors for Bahmni, CARE, GNU Health, OpenEMR, and OpenMRS 3 are also ready to connect, with field verification to follow per hospital. PRECIA doesn't replace your SIMRS, it complements it: patient data flows in automatically, AI results flow back to the system you already use. Using a different SIMRS? Talk to our team about your needs."
       }
     ]
   },
   "simrs": {
     "eyebrow": "Connectivity",
-    "title": "Proven to connect with the SIMRS you already use",
-    "subtitle": "PRECIA doesn't replace your SIMRS. We've tested the integration path end-to-end: patient data flows into PRECIA automatically, AI results flow back to your SIMRS, no double data entry.",
+    "title": "Connected to the SIMRS you already use",
+    "subtitle": "PRECIA doesn't replace your SIMRS, it complements it: patient data flows into PRECIA automatically, AI results flow back to your SIMRS, no double data entry. SIMRS Khanza, MEDICCA, and Open Hospital have been tested end-to-end in our test environment. The five other SIMRS below already have a ready connector, with field verification to follow per hospital.",
     "items": [
+      {
+        "key": "bahmni",
+        "name": "Bahmni",
+        "note": "Ready to connect. The connector writes AI results back as a Bahmni encounter note.",
+        "logo": null
+      },
+      {
+        "key": "care",
+        "name": "CARE",
+        "note": "Ready to connect. The connector pushes new cases and AI results via the CARE REST API.",
+        "logo": null
+      },
+      {
+        "key": "gnuhealth",
+        "name": "GNU Health",
+        "note": "Ready to connect. The connector reads exam requests and writes AI results back.",
+        "logo": null
+      },
       {
         "key": "khanza",
         "name": "SIMRS Khanza",
-        "note": "Integrated via an on-premise bridge on the hospital side.",
+        "note": "Proven end-to-end. Integrated via an on-premise bridge on the hospital side.",
         "logo": { "file": "khanza.jpg", "kind": "badge" }
       },
       {
         "key": "medicca",
         "name": "MEDICCA",
-        "note": "Automatic transaction sync and AI result callback.",
+        "note": "Proven end-to-end. Automatic transaction sync and AI result callback.",
+        "logo": null
+      },
+      {
+        "key": "openemr",
+        "name": "OpenEMR",
+        "note": "Ready to connect. The connector reads FHIR orders and pushes AI results back to OpenEMR.",
         "logo": null
       },
       {
         "key": "openhospital",
         "name": "Open Hospital",
-        "note": "Push new cases and two-way AI result callback.",
+        "note": "Proven end-to-end. Push new cases and two-way AI result callback.",
         "logo": { "file": "openhospital.png", "kind": "icon" }
+      },
+      {
+        "key": "openmrs3",
+        "name": "OpenMRS 3",
+        "note": "Ready to connect. The connector reads orders from the worklist and writes AI results as an observation.",
+        "logo": null
       }
     ],
-    "note": "The integration path has been tested end-to-end in our test environment. Using a different SIMRS? Talk to our team about your integration needs."
+    "note": "Using a different SIMRS? Talk to our team about your integration needs."
   },
   "platform": {
     "eyebrow": "Platform and compliance",
