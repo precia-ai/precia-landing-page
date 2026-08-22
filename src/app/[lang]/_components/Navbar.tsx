@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { appUrl } from "@/lib/site";
 
 const navLinks: { href: string; key: keyof Dictionary["nav"] }[] = [
   { href: "#platform", key: "platform" },
@@ -49,7 +50,7 @@ export default function Navbar({ dict, currentLang }: { dict: Dictionary; curren
           <div className="hidden lg:flex items-center space-x-5">
             <LanguageSwitcher currentLang={currentLang} />
             <a
-              href="https://app-dev.precia.site"
+              href={appUrl}
               className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
             >
               {dict.nav.login}
@@ -112,7 +113,7 @@ export default function Navbar({ dict, currentLang }: { dict: Dictionary; curren
               <LanguageSwitcher currentLang={currentLang} />
             </div>
             <a
-              href="https://app-dev.precia.site"
+              href={appUrl}
               className="block py-2 text-base font-medium text-foreground/80 hover:text-foreground"
               onClick={() => setIsMobileMenuOpen(false)}
             >

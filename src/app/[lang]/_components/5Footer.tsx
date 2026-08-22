@@ -4,6 +4,7 @@ import type { Dictionary } from "@/lib/dictionary";
 
 import Link from "next/link";
 import Image from "next/image";
+import { appUrl } from "@/lib/site";
 
 export default function Footer({ dict, currentLang }: { dict: Dictionary; currentLang: string }) {
   const productLinks: { href: string; key: keyof Dictionary["nav"] }[] = [
@@ -49,7 +50,7 @@ export default function Footer({ dict, currentLang }: { dict: Dictionary; curren
             <div className="mt-3.5 flex flex-col gap-2.5 text-sm text-foreground/80">
               <Link href="#kontak" className="hover:text-primary transition-colors">{dict.nav.contact}</Link>
               <Link href="#kontak" className="hover:text-primary transition-colors">{dict.nav.cta}</Link>
-              <a href="https://app-dev.precia.site" className="hover:text-primary transition-colors">{dict.footer.company_login}</a>
+              <a href={appUrl} className="hover:text-primary transition-colors">{dict.footer.company_login}</a>
               {process.env.NEXT_PUBLIC_DOCS_URL && (
                 <a
                   href={`${process.env.NEXT_PUBLIC_DOCS_URL}/${currentLang}`}

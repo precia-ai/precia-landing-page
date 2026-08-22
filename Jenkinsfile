@@ -52,6 +52,7 @@ pipeline {
                     env.IMAGE_BUILD = "${env.IMAGE_NAME}:${tag}-${env.BUILD_NUMBER}"
                     env.NEXT_PUBLIC_SITE_URL = isMain ? 'https://precia.site' : 'https://landing-dev.precia.site'
                     env.NEXT_PUBLIC_DOCS_URL = isMain ? 'https://docs.precia.site' : 'https://docs-dev.precia.site'
+                    env.NEXT_PUBLIC_APP_URL = isMain ? 'https://app.precia.site' : 'https://app-dev.precia.site'
                 }
                 sh '''
                     mkdir -p "$DOCKER_CONFIG"
@@ -59,6 +60,7 @@ pipeline {
                     DOCKER_BUILDKIT=1 docker build \
                         --build-arg NEXT_PUBLIC_SITE_URL="$NEXT_PUBLIC_SITE_URL" \
                         --build-arg NEXT_PUBLIC_DOCS_URL="$NEXT_PUBLIC_DOCS_URL" \
+                        --build-arg NEXT_PUBLIC_APP_URL="$NEXT_PUBLIC_APP_URL" \
                         -t "$IMAGE_TAG" -t "$IMAGE_BUILD" -f Dockerfile .
                     docker push "$IMAGE_TAG"
                     docker push "$IMAGE_BUILD"
