@@ -17,9 +17,14 @@ COPY . .
 
 ARG NEXT_PUBLIC_SITE_URL=https://precia.site
 ARG NEXT_PUBLIC_DOCS_URL=
+# No default. src/lib/site.ts refuses to build without a valid URL here, so a
+# build that forgets to pass this fails at `npm run build` instead of
+# shipping a login link hardcoded to the wrong environment.
+ARG NEXT_PUBLIC_APP_URL=
 
 ENV NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL}
 ENV NEXT_PUBLIC_DOCS_URL=${NEXT_PUBLIC_DOCS_URL}
+ENV NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
 
 RUN npm run build
 
