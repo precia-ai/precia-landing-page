@@ -169,43 +169,43 @@
       },
       {
         "question": "Apakah PRECIA bisa terhubung ke SIMRS yang sudah dipakai rumah sakit saya?",
-        "answer": "Kami sudah menguji jalur integrasi end-to-end dengan SIMRS Khanza, MEDICCA, dan Open Hospital di lingkungan pengujian kami. Konektor untuk Bahmni, CARE, GNU Health, OpenEMR, dan OpenMRS 3 juga sudah siap dihubungkan, pembuktian di lapangan menyusul per rumah sakit. PRECIA bukan pengganti SIMRS Anda, cuma pelengkap: data pasien masuk otomatis, hasil AI kembali ke sistem yang sudah Anda pakai. Pakai SIMRS lain? Diskusikan kebutuhan Anda dengan tim kami."
+        "answer": "CARE, Bahmni, GNU Health, dan Open Hospital sudah terbukti end-to-end di production. OpenMRS 3 terbukti membaca kasus di production, penulisan hasil AI baru terbukti di lingkungan pengujian kami. Konektor untuk SIMRS Khanza, MEDICCA, dan OpenEMR juga sudah siap dihubungkan, pembuktian di lapangan menyusul per rumah sakit. PRECIA bukan pengganti SIMRS Anda, cuma pelengkap: data pasien masuk otomatis, hasil AI kembali ke sistem yang sudah Anda pakai. Pakai SIMRS lain? Diskusikan kebutuhan Anda dengan tim kami."
       }
     ]
   },
   "simrs": {
     "eyebrow": "Konektivitas",
     "title": "Terhubung dengan SIMRS yang sudah Anda pakai",
-    "subtitle": "PRECIA bukan pengganti SIMRS Anda, cuma pelengkap: data pasien masuk otomatis ke PRECIA, hasil AI kembali ke SIMRS Anda, tanpa entri data ganda. SIMRS Khanza, MEDICCA, dan Open Hospital sudah kami uji end-to-end di lingkungan pengujian kami. Lima SIMRS lain di bawah ini sudah punya konektor yang siap dihubungkan, pembuktian di lapangan menyusul per rumah sakit.",
+    "subtitle": "PRECIA bukan pengganti SIMRS Anda, cuma pelengkap: data pasien masuk otomatis ke PRECIA, hasil AI kembali ke SIMRS Anda, tanpa entri data ganda. Delapan SIMRS sudah punya adapter PRECIA. CARE, Bahmni, GNU Health, dan Open Hospital terbukti end-to-end di production. OpenMRS 3 terbukti membaca kasus di production, penulisan hasil AI baru terbukti di lingkungan pengujian kami. SIMRS Khanza, MEDICCA, dan OpenEMR sudah punya konektor yang siap dihubungkan, pembuktian di lapangan menyusul per rumah sakit.",
     "items": [
       {
         "key": "bahmni",
         "name": "Bahmni",
-        "note": "Siap terhubung. Konektor menulis hasil AI sebagai catatan encounter Bahmni.",
+        "note": "Terbukti end-to-end di production. Konektor menulis hasil AI sebagai catatan encounter Bahmni.",
         "logo": null
       },
       {
         "key": "care",
         "name": "CARE",
-        "note": "Siap terhubung. Konektor mendorong kasus baru dan hasil AI lewat REST API CARE.",
+        "note": "Terbukti end-to-end di production. Konektor mendorong kasus baru dan hasil AI lewat REST API CARE.",
         "logo": null
       },
       {
         "key": "gnuhealth",
         "name": "GNU Health",
-        "note": "Siap terhubung. Konektor membaca permintaan pemeriksaan dan menulis balik hasil AI.",
+        "note": "Terbukti end-to-end di production. Konektor membaca permintaan pemeriksaan dan menulis balik hasil AI.",
         "logo": null
       },
       {
         "key": "khanza",
         "name": "SIMRS Khanza",
-        "note": "Terbukti end-to-end. Terintegrasi lewat bridge on-premise di sisi rumah sakit.",
+        "note": "Siap terhubung. Konektor terhubung lewat bridge on-premise di sisi rumah sakit.",
         "logo": { "file": "khanza.jpg", "kind": "badge" }
       },
       {
         "key": "medicca",
         "name": "MEDICCA",
-        "note": "Terbukti end-to-end. Sinkronisasi transaksi dan callback hasil AI otomatis.",
+        "note": "Siap terhubung. Sinkronisasi transaksi dan callback hasil AI otomatis.",
         "logo": null
       },
       {
@@ -217,13 +217,13 @@
       {
         "key": "openhospital",
         "name": "Open Hospital",
-        "note": "Terbukti end-to-end. Push kasus baru dan callback hasil AI dua arah.",
+        "note": "Terbukti end-to-end di production. Push kasus baru dan callback hasil AI dua arah.",
         "logo": { "file": "openhospital.png", "kind": "icon" }
       },
       {
         "key": "openmrs3",
         "name": "OpenMRS 3",
-        "note": "Siap terhubung. Konektor membaca order dari worklist dan menulis hasil AI sebagai observasi.",
+        "note": "Baca kasus terbukti di production, tulis balik hasil AI baru terbukti di lingkungan pengujian kami. Konektor membaca order dari worklist dan menulis hasil AI sebagai observasi.",
         "logo": null
       }
     ],
