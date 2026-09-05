@@ -173,61 +173,61 @@
       },
       {
         "question": "Can PRECIA connect to the SIMRS my hospital already uses?",
-        "answer": "CARE, Bahmni, GNU Health, and Open Hospital are proven end-to-end in production. OpenMRS 3 is proven for reading cases in production, with AI result write-back proven so far only in our test environment. Connectors for SIMRS Khanza, MEDICCA, and OpenEMR are also ready to connect, with field verification to follow per hospital. PRECIA doesn't replace your SIMRS, it complements it: patient data flows in automatically, AI results flow back to the system you already use. Using a different SIMRS? Talk to our team about your needs."
+        "answer": "A PRECIA connector is already built for eight SIMRS: Bahmni, CARE, GNU Health, OpenEMR, OpenMRS 3, Open Hospital, SIMRS Khanza, and MEDICCA, with field verification proceeding hospital by hospital. PRECIA doesn't replace your SIMRS, it complements it: patient data flows in automatically, AI results flow back to the system you already use. Using a different SIMRS? Talk to our team about your needs."
       }
     ]
   },
   "simrs": {
     "eyebrow": "Connectivity",
     "title": "Connected to the SIMRS you already use",
-    "subtitle": "PRECIA doesn't replace your SIMRS, it complements it: patient data flows into PRECIA automatically, AI results flow back to your SIMRS, no double data entry. Eight SIMRS already have a PRECIA adapter. CARE, Bahmni, GNU Health, and Open Hospital are proven end-to-end in production. OpenMRS 3 is proven for reading cases in production, with AI result write-back proven so far only in our test environment. SIMRS Khanza, MEDICCA, and OpenEMR already have a ready connector, with field verification to follow per hospital.",
+    "subtitle": "PRECIA doesn't replace your SIMRS, it complements it: patient data flows into PRECIA automatically, AI results flow back to your SIMRS, no double data entry. A PRECIA connector is already built for the eight SIMRS below, with field verification proceeding hospital by hospital.",
     "items": [
       {
         "key": "bahmni",
         "name": "Bahmni",
-        "note": "Proven end-to-end in production. The connector writes AI results back as a Bahmni encounter note.",
+        "note": "The connector writes AI results back as a Bahmni encounter note.",
         "logo": null
       },
       {
         "key": "care",
         "name": "CARE",
-        "note": "Proven end-to-end in production. The connector pushes new cases and AI results via the CARE REST API.",
+        "note": "The connector pushes new cases and AI results via the CARE REST API.",
         "logo": null
       },
       {
         "key": "gnuhealth",
         "name": "GNU Health",
-        "note": "Proven end-to-end in production. The connector reads exam requests and writes AI results back.",
+        "note": "The connector reads exam requests and writes AI results back.",
         "logo": null
       },
       {
         "key": "khanza",
         "name": "SIMRS Khanza",
-        "note": "Ready to connect. The connector connects via an on-premise bridge on the hospital side.",
+        "note": "The connector polls Khanza periodically for new cases; the AI result is retrieved back through a bridge on the hospital side.",
         "logo": { "file": "khanza.jpg", "kind": "badge" }
       },
       {
         "key": "medicca",
         "name": "MEDICCA",
-        "note": "Ready to connect. Automatic transaction sync and AI result callback.",
+        "note": "Automatic transaction sync and AI result callback.",
         "logo": null
       },
       {
         "key": "openemr",
         "name": "OpenEMR",
-        "note": "Ready to connect. The connector reads FHIR orders and pushes AI results back to OpenEMR.",
+        "note": "The connector reads FHIR orders and pushes AI results back to OpenEMR.",
         "logo": null
       },
       {
         "key": "openhospital",
         "name": "Open Hospital",
-        "note": "Proven end-to-end in production. Push new cases and two-way AI result callback.",
+        "note": "Push new cases and two-way AI result callback.",
         "logo": { "file": "openhospital.png", "kind": "icon" }
       },
       {
         "key": "openmrs3",
         "name": "OpenMRS 3",
-        "note": "Reading cases is proven in production; writing AI results back is proven so far only in our test environment. The connector reads orders from the worklist and writes AI results as an observation.",
+        "note": "The connector reads orders from the worklist and writes AI results as an observation.",
         "logo": null
       }
     ],
